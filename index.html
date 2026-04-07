@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CreditExchange — India's Largest AI-Driven Loan Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:       #040d1e;
+  --navy-mid:   #071226;
+  --navy-card:  #0c1a34;
+  --navy-light: #102040;
+  --blue:       #1540a0;
+  --blue-bright:#2155d4;
+  --sky:        #3b82f6;
+  --accent:     #f97316;
+  --accent-h:   #ea6c0a;
+  --gold:       #f59e0b;
+  --white:      #ffffff;
+  --off-white:  #eef3ff;
+  --surface:    #f6f9ff;
+  --muted:      #64748b;
+  --border:     #e2e8f0;
+  --text:       #0b1225;
+  --r:          12px;
+  --r-lg:       18px;
+  --shadow:     0 4px 28px rgba(4,13,30,0.14);
+  --shadow-lg:  0 12px 56px rgba(4,13,30,0.22);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surface);color:var(--text);overflow-x:hidden;}
+
+::-webkit-scrollbar{width:6px;height:6px;}
+::-webkit-scrollbar-track{background:var(--navy);}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:6px;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:66px;
+  background:rgba(4,13,30,0.96);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.07);
+  display:flex;align-items:center;padding:0 44px;gap:0;
+  transition:background 0.3s;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:44px;}
+.nav-logo-mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,#1540a0,#3b82f6);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;color:white;letter-spacing:-0.5px;
+}
+.nav-logo-text{font-weight:800;font-size:17px;color:white;letter-spacing:-0.3px;}
+.nav-logo-text em{font-style:normal;color:var(--accent);}
+.nav-links{display:flex;gap:2px;flex:1;}
+.nav-link{
+  padding:7px 14px;border-radius:8px;font-size:13.5px;font-weight:500;
+  color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.18s;text-decoration:none;
+  display:flex;align-items:center;gap:3px;
+}
+.nav-link:hover{background:rgba(255,255,255,0.07);color:white;}
+.nav-link svg{width:12px;height:12px;opacity:0.5;}
+.nav-actions{display:flex;align-items:center;gap:8px;}
+.btn-ghost{
+  padding:8px 18px;border-radius:8px;font-size:13.5px;font-weight:600;
+  color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.18);background:transparent;
+  cursor:pointer;font-family:inherit;transition:all 0.18s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.09);color:white;}
+.btn-nav-cta{
+  padding:8px 20px;border-radius:8px;font-size:13.5px;font-weight:700;
+  color:white;background:var(--accent);border:none;cursor:pointer;
+  font-family:inherit;transition:all 0.2s;display:flex;align-items:center;gap:6px;
+}
+.btn-nav-cta:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 4px 18px rgba(249,115,22,0.38);}
+.nav-location{
+  display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;
+  color:rgba(255,255,255,0.7);cursor:pointer;padding:6px 12px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.14);margin-right:6px;transition:all 0.18s;
+}
+.nav-location:hover{background:rgba(255,255,255,0.07);color:white;}
+.nav-location svg{width:14px;height:14px;color:#60a5fa;}
+
+/* ── HERO ── */
+.hero{
+  margin-top:66px;
+  min-height:600px;
+  position:relative;overflow:hidden;
+  background:var(--navy);
+  display:flex;align-items:center;
+}
+.hero-grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 40%,transparent 100%);
+}
+.hero-glow1{
+  position:absolute;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 70%);
+  top:-200px;left:-100px;
+}
+.hero-glow2{
+  position:absolute;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(249,115,22,0.12) 0%,transparent 65%);
+  bottom:-100px;right:100px;
+}
+.hero-inner{
+  position:relative;z-index:5;width:100%;
+  padding:72px 44px 80px;
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.28);
+  color:#fbbf78;padding:5px 16px 5px 10px;border-radius:100px;
+  font-size:12.5px;font-weight:600;margin-bottom:24px;letter-spacing:0.02em;
+}
+.badge-pulse{
+  width:7px;height:7px;border-radius:50%;background:#fb923c;
+  animation:bpulse 1.8s ease-in-out infinite;
+}
+@keyframes bpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.3;transform:scale(0.65);}}
+.hero h1{
+  font-size:clamp(34px,4.8vw,56px);font-weight:800;
+  color:white;line-height:1.08;margin-bottom:20px;letter-spacing:-1.5px;
+}
+.hero h1 .hi{
+  background:linear-gradient(100deg,#60a5fa 0%,#a5c8ff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:32px;max-width:440px;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
+.hero-pill{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.11);
+  color:rgba(255,255,255,0.7);padding:7px 15px;border-radius:100px;font-size:13px;font-weight:500;
+  transition:all 0.2s;cursor:default;
+}
+.hero-pill:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.2);}
+.hero-pill-dot{width:6px;height:6px;border-radius:50%;}
+.hero-pill-dot.g{background:#34d399;}
+.hero-pill-dot.o{background:#fb923c;}
+.hero-pill-dot.b{background:#60a5fa;}
+.hero-btns{display:flex;gap:12px;align-items:center;}
+.btn-hero{
+  padding:15px 32px;border-radius:10px;font-size:15px;font-weight:700;
+  cursor:pointer;font-family:inherit;transition:all 0.22s;border:none;
+}
+.btn-hero-fill{background:var(--accent);color:white;}
+.btn-hero-fill:hover{background:var(--accent-h);transform:translateY(-2px);box-shadow:0 10px 28px rgba(249,115,22,0.38);}
+.btn-hero-outline{
+  background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);
+  border:1.5px solid rgba(255,255,255,0.18)!important;backdrop-filter:blur(8px);
+}
+.btn-hero-outline:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.35)!important;}
+
+/* ══════════════════════════════════════════
+   PREMIUM BANNER CAROUSEL  (hero-right)
+══════════════════════════════════════════ */
+.hero-right{
+  position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+
+.promo-carousel-wrap{
+  width:100%;max-width:460px;
+  position:relative;
+}
+
+/* subtle outer glow ring */
+.promo-carousel-wrap::before{
+  content:'';
+  position:absolute;inset:-3px;
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(59,130,246,0.35),rgba(249,115,22,0.25),rgba(59,130,246,0.1));
+  z-index:0;
+  filter:blur(1px);
+}
+
+.promo-carousel{
+  position:relative;z-index:1;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 32px 80px rgba(4,13,30,0.7),0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.promo-slides{
+  display:flex;
+  transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);
+  will-change:transform;
+}
+
+.promo-slide{
+  min-width:100%;
+  height:260px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  padding:28px 30px;
+  box-sizing:border-box;
+}
+
+/* slide themes */
+.ps-1{background:linear-gradient(130deg,#081836 0%,#0e2d6b 55%,#1354b8 100%);}
+.ps-2{background:linear-gradient(130deg,#022414 0%,#084d2a 55%,#0b6b3a 100%);}
+.ps-3{background:linear-gradient(130deg,#2d0d00 0%,#7a2200 55%,#b03200 100%);}
+.ps-4{background:linear-gradient(130deg,#120c2e 0%,#1e1060 50%,#2a1590 100%);}
+
+/* grid dot bg overlay */
+.promo-slide::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:radial-gradient(ellipse 100% 100% at 50% 0%,black 40%,transparent 100%);
+  pointer-events:none;
+}
+
+/* glow orb */
+.promo-slide::after{
+  content:'';
+  position:absolute;
+  width:240px;height:240px;border-radius:50%;
+  top:-80px;right:-40px;
+  pointer-events:none;
+}
+.ps-1::after{background:radial-gradient(circle,rgba(59,130,246,0.28) 0%,transparent 70%);}
+.ps-2::after{background:radial-gradient(circle,rgba(0,230,118,0.2) 0%,transparent 70%);}
+.ps-3::after{background:radial-gradient(circle,rgba(255,112,0,0.28) 0%,transparent 70%);}
+.ps-4::after{background:radial-gradient(circle,rgba(120,80,255,0.28) 0%,transparent 70%);}
+
+.ps-content{flex:1;position:relative;z-index:2;}
+
+.ps-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:4px 12px;border-radius:100px;margin-bottom:10px;
+}
+.ps-tag-blue{background:rgba(59,130,246,0.18);border:1px solid rgba(59,130,246,0.35);color:#93c5fd;}
+.ps-tag-green{background:rgba(0,230,100,0.12);border:1px solid rgba(0,230,100,0.28);color:#6ee7b7;}
+.ps-tag-orange{background:rgba(255,140,0,0.15);border:1px solid rgba(255,160,0,0.3);color:#fbbf24;}
+.ps-tag-purple{background:rgba(160,100,255,0.15);border:1px solid rgba(160,100,255,0.3);color:#c4b5fd;}
+
+.ps-tag-dot{width:5px;height:5px;border-radius:50%;animation:bpulse 1.8s ease-in-out infinite;}
+.ps-tag-dot.b{background:#60a5fa;}
+.ps-tag-dot.g{background:#34d399;}
+.ps-tag-dot.o{background:#fb923c;}
+.ps-tag-dot.p{background:#a78bfa;}
+
+.ps-label{font-size:13px;font-weight:500;color:rgba(255,255,255,0.6);margin-bottom:4px;line-height:1.3;}
+.ps-amount{font-size:30px;font-weight:800;line-height:1;margin-bottom:12px;letter-spacing:-0.5px;}
+.ps-amount.blue{color:#93c5fd;}
+.ps-amount.green{color:#6ee7b7;}
+.ps-amount.orange{color:#fdba74;}
+.ps-amount.purple{color:#c4b5fd;}
+
+.ps-bullets{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:5px;}
+.ps-bullets li{
+  font-size:11.5px;color:rgba(255,255,255,0.6);
+  display:flex;align-items:center;gap:6px;
+}
+.ps-bullet-dot{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
+.b-blue{background:#60a5fa;}
+.b-green{background:#34d399;}
+.b-orange{background:#fb923c;}
+.b-purple{background:#a78bfa;}
+
+.ps-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 22px;border-radius:100px;
+  font-size:12.5px;font-weight:700;
+  border:none;cursor:pointer;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  transition:transform 0.18s,box-shadow 0.18s;
+  letter-spacing:0.02em;
+}
+.ps-btn:hover{transform:translateY(-2px);}
+.ps-btn-blue{background:linear-gradient(90deg,#2563eb,#3b82f6);color:white;box-shadow:0 6px 20px rgba(37,99,235,0.45);}
+.ps-btn-blue:hover{box-shadow:0 10px 28px rgba(37,99,235,0.55);}
+.ps-btn-green{background:linear-gradient(90deg,#059669,#10b981);color:white;box-shadow:0 6px 20px rgba(5,150,105,0.45);}
+.ps-btn-green:hover{box-shadow:0 10px 28px rgba(5,150,105,0.55);}
+.ps-btn-orange{background:linear-gradient(90deg,#ea580c,#f97316);color:white;box-shadow:0 6px 20px rgba(234,88,12,0.45);}
+.ps-btn-orange:hover{box-shadow:0 10px 28px rgba(234,88,12,0.55);}
+.ps-btn-purple{background:linear-gradient(90deg,#7c3aed,#8b5cf6);color:white;box-shadow:0 6px 20px rgba(124,58,237,0.45);}
+.ps-btn-purple:hover{box-shadow:0 10px 28px rgba(124,58,237,0.55);}
+.ps-btn svg{width:13px;height:13px;}
+
+/* right visual panels */
+.ps-visual{
+  position:relative;z-index:2;
+  flex-shrink:0;width:130px;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* Slide 1 — stacked money notes */
+.money-stack{display:flex;flex-direction:column;gap:5px;align-items:center;}
+.money-note{
+  width:94px;height:36px;border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,0.9);
+  position:relative;overflow:hidden;
+}
+.mn-1{background:linear-gradient(135deg,#1d6e2a,#2da83d);box-shadow:0 3px 12px rgba(0,0,0,0.4);}
+.mn-2{background:linear-gradient(135deg,#176021,#248f34);box-shadow:0 3px 12px rgba(0,0,0,0.4);transform:translateX(5px);}
+.mn-3{background:linear-gradient(135deg,#10501a,#1d7529);box-shadow:0 3px 12px rgba(0,0,0,0.4);transform:translateX(-5px);}
+.money-note::before{content:'₹';position:absolute;font-size:38px;font-weight:800;opacity:0.07;right:-4px;}
+
+/* Slide 2 — credit score gauge */
+.score-ring-wrap{position:relative;width:100px;height:100px;}
+.score-ring-wrap svg{width:100px;height:100px;}
+.score-label{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+.score-num{font-size:22px;font-weight:800;color:#6ee7b7;line-height:1;}
+.score-sub{font-size:9px;color:rgba(255,255,255,0.45);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;}
+
+/* Slide 3 — cashback badge */
+.cashback-circle{
+  width:108px;height:108px;border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  border:2px solid rgba(255,150,0,0.3);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  position:relative;
+}
+.cashback-circle::before{
+  content:'';position:absolute;inset:-6px;border-radius:50%;
+  border:1.5px dashed rgba(255,150,0,0.2);
+  animation:spinSlow 12s linear infinite;
+}
+@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.cb-pct{font-size:32px;font-weight:800;color:#fdba74;line-height:1;}
+.cb-lbl{font-size:9px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;}
+
+/* Slide 4 — FD card visual */
+.fd-card-mini{
+  width:110px;height:68px;border-radius:10px;
+  background:linear-gradient(135deg,#1e0a60,#3b1fa0);
+  border:1px solid rgba(160,100,255,0.3);
+  padding:10px 12px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 12px 32px rgba(0,0,0,0.5);
+}
+.fd-card-chip{width:24px;height:17px;background:linear-gradient(135deg,#fcd34d,#f59e0b);border-radius:3px;}
+.fd-card-num{font-size:8.5px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1.5px;}
+.fd-card-badge{
+  margin-top:10px;
+  background:rgba(160,100,255,0.15);border:1px solid rgba(160,100,255,0.3);
+  border-radius:6px;padding:5px 8px;text-align:center;
+  font-size:9.5px;font-weight:700;color:#c4b5fd;
+}
+
+/* progress bar */
+.promo-progress{
+  position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:rgba(255,255,255,0.08);z-index:5;
+}
+.promo-progress-bar{
+  height:100%;background:linear-gradient(90deg,rgba(255,255,255,0.5),rgba(255,255,255,0.9));
+  border-radius:0;
+  transition:none;
+}
+
+/* dots */
+.promo-dots{
+  display:flex;justify-content:center;gap:7px;
+  padding:14px 0 6px;
+  position:relative;z-index:3;
+}
+.promo-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  cursor:pointer;transition:all 0.25s;border:none;padding:0;
+}
+.promo-dot.active{
+  width:22px;border-radius:3px;background:white;
+}
+
+/* nav arrows */
+.promo-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.14);
+  backdrop-filter:blur(10px);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:10;transition:all 0.18s;color:rgba(255,255,255,0.7);
+  font-size:16px;line-height:1;
+}
+.promo-nav:hover{background:rgba(255,255,255,0.16);color:white;}
+.promo-prev{left:-16px;}
+.promo-next{right:-16px;}
+
+/* ── SEARCH PANEL ── */
+.search-panel-wrap{
+  position:relative;z-index:20;width:100%;
+  display:flex;justify-content:center;
+  margin-top:-52px;padding:0 44px;
+}
+.search-panel{
+  width:100%;max-width:1120px;
+  background:white;border-radius:22px;
+  box-shadow:0 24px 64px rgba(4,13,30,0.22);
+  overflow:hidden;border:1px solid rgba(0,0,0,0.06);
+}
+.search-tabs{
+  display:flex;border-bottom:1px solid var(--border);
+  overflow-x:auto;padding:0 10px;background:#f8faff;
+  scrollbar-width:none;
+}
+.search-tabs::-webkit-scrollbar{display:none;}
+.s-tab{
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  padding:16px 20px;cursor:pointer;border-bottom:3px solid transparent;
+  font-size:12.5px;font-weight:600;color:var(--muted);
+  transition:all 0.2s;white-space:nowrap;
+}
+.s-tab:hover{color:var(--blue-bright);}
+.s-tab.active{color:var(--blue-bright);border-bottom-color:var(--accent);background:white;}
+.s-tab-icon{font-size:20px;}
+.search-body{padding:26px 30px;display:flex;gap:14px;align-items:flex-end;}
+.s-field{flex:1;display:flex;flex-direction:column;gap:6px;}
+.s-field label{font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;}
+.s-field select,.s-field input{
+  padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;
+  font-size:14px;font-family:inherit;color:var(--text);
+  background:var(--surface);transition:all 0.18s;outline:none;
+  appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;
+}
+.s-field select:focus,.s-field input:focus{border-color:var(--blue-bright);background:white;box-shadow:0 0 0 3px rgba(33,85,212,0.08);}
+.s-field input{background-image:none;padding-right:14px;}
+.btn-search{
+  padding:0 32px;border-radius:10px;background:var(--accent);color:white;
+  font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;
+  transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:8px;
+  height:48px;flex-shrink:0;
+}
+.btn-search:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 8px 20px rgba(249,115,22,0.38);}
+
+/* ── LOGOS STRIP ── */
+.logos-strip{
+  padding:28px 44px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);
+  display:flex;align-items:center;gap:20px;overflow:hidden;margin-top:64px;
+}
+.logos-label{font-size:11.5px;font-weight:700;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;}
+.logos-divider{width:1px;height:30px;background:rgba(255,255,255,0.1);flex-shrink:0;}
+.logos-track{display:flex;gap:0;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
+.logos-inner{display:flex;gap:0;animation:scrollL 22s linear infinite;}
+@keyframes scrollL{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.logo-chip{
+  padding:0 26px;height:38px;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:rgba(255,255,255,0.3);white-space:nowrap;
+  border-right:1px solid rgba(255,255,255,0.07);transition:color 0.2s;
+}
+.logo-chip:hover{color:rgba(255,255,255,0.7);}
+
+/* ── SECTIONS ── */
+.section{padding:80px 44px;}
+.sec-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.sec-eyebrow-line{width:32px;height:3px;background:var(--accent);border-radius:2px;}
+.sec-eyebrow-text{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;}
+.sec-title{font-size:clamp(26px,3.2vw,36px);font-weight:800;color:var(--navy);line-height:1.18;margin-bottom:10px;letter-spacing:-0.5px;}
+.sec-title em{font-style:normal;color:var(--blue-bright);}
+.sec-sub{font-size:15px;color:var(--muted);margin-bottom:44px;max-width:520px;line-height:1.7;}
+
+/* ── SERVICES ── */
+.services-section{background:var(--surface);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.svc-card{
+  background:white;border-radius:20px;overflow:hidden;
+  border:1px solid var(--border);cursor:pointer;
+  transition:transform 0.28s,box-shadow 0.28s;position:relative;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.svc-card-hero{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.svc-card-hero.c1{background:linear-gradient(140deg,var(--navy) 0%,#1540a0 100%);}
+.svc-card-hero.c2{background:linear-gradient(140deg,#6b1a03 0%,#c2410c 100%);}
+.svc-card-hero.c3{background:linear-gradient(140deg,#022c1c 0%,#059669 100%);}
+.svc-card-bg-icon{position:absolute;font-size:100px;opacity:0.07;right:-15px;bottom:-20px;filter:blur(1px);}
+.svc-card-main-icon{font-size:60px;position:relative;z-index:2;filter:drop-shadow(0 6px 20px rgba(0,0,0,0.3));}
+.svc-badge{
+  position:absolute;top:14px;left:14px;
+  background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.18);
+  color:white;padding:4px 11px;border-radius:100px;
+  font-size:10.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
+}
+.svc-card-body{padding:22px 24px 24px;}
+.svc-card-tag{font-size:11px;font-weight:700;color:var(--blue-bright);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
+.svc-card-title{font-size:17px;font-weight:800;margin-bottom:14px;color:var(--navy);line-height:1.3;}
+.svc-card-feats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
+.svc-feat{
+  display:flex;align-items:center;gap:5px;
+  background:var(--surface);border:1px solid var(--border);
+  padding:4px 11px;border-radius:100px;font-size:11.5px;color:var(--muted);font-weight:500;
+}
+.svc-cta{
+  width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;
+  border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;color:white;
+}
+.svc-cta.c1{background:var(--navy);}
+.svc-cta.c1:hover{background:var(--blue);}
+.svc-cta.c2{background:var(--accent);}
+.svc-cta.c2:hover{background:var(--accent-h);}
+.svc-cta.c3{background:#059669;}
+.svc-cta.c3:hover{background:#047857;}
+
+/* ── STATS STRIP ── */
+.stats-strip{
+  background:var(--navy);padding:52px 44px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  position:relative;overflow:hidden;
+}
+.stats-strip::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(33,85,212,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.06) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.stat-box{text-align:center;padding:16px 20px;border-right:1px solid rgba(255,255,255,0.08);color:white;position:relative;z-index:1;}
+.stat-box:last-child{border-right:none;}
+.stat-num{font-size:42px;font-weight:800;color:#93c5fd;line-height:1;letter-spacing:-1px;}
+.stat-lbl{font-size:14px;color:rgba(255,255,255,0.45);margin-top:7px;font-weight:500;}
+.stat-box:hover .stat-num{color:#bfdbfe;transition:color 0.2s;}
+
+/* ── PRODUCTS ── */
+.products-section{background:white;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.prod-card{
+  border:1.5px solid var(--border);border-radius:16px;padding:24px;
+  cursor:pointer;transition:all 0.22s;background:white;
+  display:flex;flex-direction:column;gap:10px;
+}
+.prod-card:hover{border-color:var(--blue-bright);box-shadow:0 6px 28px rgba(33,85,212,0.1);transform:translateY(-3px);}
+.prod-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;}
+.prod-icon.blue{background:#eff6ff;}
+.prod-icon.orange{background:#fff7ed;}
+.prod-icon.green{background:#f0fdf4;}
+.prod-icon.purple{background:#faf5ff;}
+.prod-icon.teal{background:#f0fdfa;}
+.prod-icon.red{background:#fff1f2;}
+.prod-title{font-weight:800;font-size:15.5px;color:var(--navy);}
+.prod-desc{font-size:13px;color:var(--muted);line-height:1.6;}
+.prod-rate{display:flex;align-items:center;gap:7px;margin-top:4px;}
+.prod-rate-lbl{font-size:11px;color:var(--muted);}
+.prod-rate-val{font-size:14.5px;font-weight:800;color:var(--blue-bright);}
+.prod-arrow{margin-top:auto;font-size:13px;font-weight:700;color:var(--blue-bright);display:flex;align-items:center;gap:4px;}
+
+/* ── HOW IT WORKS ── */
+.how-section{background:var(--navy);position:relative;overflow:hidden;}
+.how-section .sec-title{color:white;}
+.how-section .sec-sub{color:rgba(255,255,255,0.45);}
+.how-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);
+  background-size:44px 44px;
+}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;}
+.how-connector{
+  position:absolute;top:54px;left:calc(33.33% + 10px);
+  width:calc(33.33% - 20px);height:2px;
+  background:linear-gradient(90deg,rgba(33,85,212,0.6),rgba(249,115,22,0.6));
+  z-index:0;border-radius:2px;
+}
+.how-connector2{left:calc(66.66% + 10px);}
+.step-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;padding:32px 28px;position:relative;z-index:1;transition:all 0.25s;
+}
+.step-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.14);}
+.step-badge{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--blue-bright));
+  color:white;font-weight:800;font-size:17px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  box-shadow:0 4px 16px rgba(33,85,212,0.35);
+}
+.step-icon{font-size:30px;margin-bottom:12px;}
+.step-title{font-weight:800;font-size:17px;color:white;margin-bottom:9px;}
+.step-desc{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;}
+
+/* ── TAX ── */
+.tax-section{background:var(--surface);}
+.tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.tax-card{
+  border-radius:18px;padding:34px 32px;
+  display:flex;align-items:flex-start;gap:22px;
+  cursor:pointer;transition:all 0.22s;border:1.5px solid var(--border);background:white;
+}
+.tax-card:hover{border-color:var(--blue-bright);box-shadow:var(--shadow);transform:translateY(-3px);}
+.tax-icon{width:58px;height:58px;border-radius:16px;font-size:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.tax-icon.blue{background:#eff6ff;}
+.tax-icon.green{background:#f0fdf4;}
+.tax-body h3{font-weight:800;font-size:19px;color:var(--navy);margin-bottom:9px;}
+.tax-body p{font-size:13.5px;color:var(--muted);line-height:1.7;}
+.tax-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--blue-bright);font-size:13.5px;font-weight:700;cursor:pointer;}
+
+/* ── TESTIMONIALS ── */
+.testi-section{background:var(--navy);overflow:hidden;}
+.testi-section .sec-title{color:white;}
+.testi-section .sec-sub{color:rgba(255,255,255,0.45);}
+.testi-track{overflow:hidden;position:relative;}
+.testi-track::after,.testi-track::before{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
+.testi-track::before{left:0;background:linear-gradient(to right,var(--navy),transparent);}
+.testi-track::after{right:0;background:linear-gradient(to left,var(--navy),transparent);}
+.testi-inner{display:flex;gap:20px;animation:scrollL 34s linear infinite;}
+.testi-inner:hover{animation-play-state:paused;}
+.testi-card{
+  min-width:300px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;padding:26px;transition:all 0.2s;
+}
+.testi-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.14);}
+.testi-stars{color:var(--gold);font-size:13px;margin-bottom:10px;}
+.testi-title{font-weight:700;font-size:15px;color:white;margin-bottom:9px;}
+.testi-text{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:18px;font-style:italic;}
+.testi-author{display:flex;align-items:center;gap:11px;}
+.testi-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--blue-bright));
+  display:flex;align-items:center;justify-content:center;
+  color:white;font-weight:700;font-size:13px;flex-shrink:0;
+}
+.testi-name{font-weight:700;font-size:13.5px;color:white;}
+.testi-role{font-size:11.5px;color:rgba(255,255,255,0.35);}
+
+/* ── PARTNERS ── */
+.partners-section{background:var(--surface);padding:60px 44px;}
+.prt-track{overflow:hidden;margin-top:34px;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
+.prt-inner{display:flex;gap:14px;animation:scrollL 20s linear infinite;align-items:center;}
+.prt-chip{
+  min-width:160px;height:56px;background:white;border-radius:12px;
+  border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#8097b8;padding:0 24px;white-space:nowrap;transition:all 0.2s;
+}
+.prt-chip:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
+
+/* ── HELP ── */
+.help-section{background:var(--navy);padding:60px 44px;}
+.help-section .sec-title{color:white;}
+.help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;}
+.help-card{
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;
+  cursor:pointer;transition:all 0.22s;
+}
+.help-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16);transform:translateY(-2px);}
+.help-icon{width:50px;height:50px;border-radius:13px;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.help-icon.bl{background:rgba(33,85,212,0.2);}
+.help-icon.or{background:rgba(249,115,22,0.15);}
+.help-icon.gr{background:rgba(5,150,105,0.18);}
+.help-text h4{font-size:14.5px;font-weight:700;color:white;}
+.help-text p{font-size:12.5px;color:rgba(255,255,255,0.4);margin-top:2px;}
+.help-arr{margin-left:auto;color:rgba(255,255,255,0.25);font-size:20px;font-weight:300;}
+
+/* ── CTA BANNER ── */
+.cta-wrap{padding:0 44px 80px;background:var(--surface);}
+.cta-banner{
+  border-radius:24px;padding:56px 64px;background:var(--navy);
+  border:1px solid rgba(255,255,255,0.06);
+  display:flex;align-items:center;justify-content:space-between;
+  overflow:hidden;position:relative;
+}
+.cta-banner::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(33,85,212,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.08) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.cta-banner::after{
+  content:'';position:absolute;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 65%);
+  right:-100px;top:50%;transform:translateY(-50%);
+}
+.cta-text{position:relative;z-index:1;}
+.cta-banner h2{font-size:30px;font-weight:800;color:white;margin-bottom:9px;letter-spacing:-0.5px;}
+.cta-banner p{font-size:15.5px;color:rgba(255,255,255,0.5);}
+.btn-cta-final{
+  position:relative;z-index:1;
+  padding:16px 40px;border-radius:12px;background:var(--accent);color:white;
+  font-size:15.5px;font-weight:800;border:none;cursor:pointer;font-family:inherit;
+  transition:all 0.22s;white-space:nowrap;flex-shrink:0;
+}
+.btn-cta-final:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(249,115,22,0.42);}
+
+/* ── FOOTER ── */
+footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:44px;margin-bottom:56px;}
+.footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.footer-logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#1540a0,#3b82f6);display:flex;align-items:center;justify-content:center;color:white;font-size:13px;font-weight:800;}
+.footer-logo-name{font-weight:800;font-size:17px;color:white;}
+.footer-logo-name em{font-style:normal;color:var(--accent);}
+.footer-desc{font-size:13px;line-height:1.8;margin-bottom:22px;color:rgba(255,255,255,0.38);}
+.footer-contact p{font-size:13px;margin-bottom:6px;color:rgba(255,255,255,0.38);}
+.footer-col h4{color:rgba(255,255,255,0.22);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.13em;margin-bottom:18px;}
+.footer-col a{display:block;color:rgba(255,255,255,0.45);font-size:13px;text-decoration:none;margin-bottom:12px;transition:color 0.2s;}
+.footer-col a:hover{color:white;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.22);}
+.social-links{display:flex;gap:8px;}
+.social-link{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:all 0.2s;color:rgba(255,255,255,0.45);}
+.social-link:hover{background:rgba(255,255,255,0.12);color:white;}
+
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.vis{opacity:1;transform:none;}
+.stagger > *{opacity:0;transform:translateY(24px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.stagger.vis > *:nth-child(1){transition-delay:0ms;opacity:1;transform:none;}
+.stagger.vis > *:nth-child(2){transition-delay:80ms;opacity:1;transform:none;}
+.stagger.vis > *:nth-child(3){transition-delay:160ms;opacity:1;transform:none;}
+.stagger.vis > *:nth-child(4){transition-delay:240ms;opacity:1;transform:none;}
+.stagger.vis > *:nth-child(5){transition-delay:320ms;opacity:1;transform:none;}
+.stagger.vis > *:nth-child(6){transition-delay:400ms;opacity:1;transform:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:980px){
+  nav{padding:0 18px;}
+  .nav-links{display:none;}
+  .hero-inner{grid-template-columns:1fr;padding:44px 18px 0;}
+  .hero-right{display:none;}
+  .search-panel-wrap{padding:0 18px;}
+  .search-body{flex-direction:column;}
+  .logos-strip{padding:20px 18px;}
+  .section{padding:52px 18px;}
+  .services-grid,.products-grid,.how-grid,.tax-grid,.help-grid{grid-template-columns:1fr;}
+  .stats-strip{grid-template-columns:1fr 1fr;padding:36px 18px;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+  .cta-wrap{padding:0 18px 52px;}
+  .cta-banner{flex-direction:column;gap:24px;padding:40px 26px;text-align:center;}
+  footer{padding:52px 18px 30px;}
+  .partners-section,.help-section{padding:52px 18px;}
+  .how-connector,.how-connector2{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="nav-logo-mark">CE</div>
+    <div class="nav-logo-text">Credit<em>Exchange</em></div>
+  </a>
+  <div class="nav-links">
+    <a class="nav-link" href="#">Loans <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+    <a class="nav-link" href="#">Tax Filing <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+    <a class="nav-link" href="#">Credit Cards</a>
+    <a class="nav-link" href="#">About Us</a>
+    <a class="nav-link" href="#">Partner With Us</a>
+  </div>
+  <div class="nav-actions">
+    <div class="nav-location">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Delhi
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:11px"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <button class="btn-ghost">Sign In</button>
+    <button class="btn-nav-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      Book Appointment
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow1"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT TEXT -->
+    <div class="hero-text">
+      <div class="hero-badge"><div class="badge-pulse"></div>0% Processing Fee · Limited Time</div>
+      <h1>India's Largest<br><span class="hi">AI-Driven</span><br>Loan Platform</h1>
+      <p class="hero-sub">Smart AI matches you with your perfect loan in minutes. One application, 1000+ lenders, rates you won't find elsewhere.</p>
+      <div class="hero-pills">
+        <div class="hero-pill"><div class="hero-pill-dot g"></div>5-min approval</div>
+        <div class="hero-pill"><div class="hero-pill-dot o"></div>Zero hidden fees</div>
+        <div class="hero-pill"><div class="hero-pill-dot b"></div>100% secure & private</div>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-hero btn-hero-fill">Apply Now — It's Free</button>
+        <button class="btn-hero btn-hero-outline">Explore Loans</button>
+      </div>
+    </div>
+
+    <!-- RIGHT — PREMIUM BANNER CAROUSEL -->
+    <div class="hero-right">
+      <div class="promo-carousel-wrap">
+
+        <!-- prev/next arrows -->
+        <button class="promo-nav promo-prev" id="promoPrev">&#8249;</button>
+        <button class="promo-nav promo-next" id="promoNext">&#8250;</button>
+
+        <div class="promo-carousel">
+          <div class="promo-slides" id="promoSlides">
+
+            <!-- SLIDE 1: Personal Loan -->
+            <div class="promo-slide ps-1">
+              <div class="ps-content">
+                <div class="ps-tag ps-tag-blue"><span class="ps-tag-dot b"></span>Need urgent funds?</div>
+                <div class="ps-label">Get Personal Loan up to</div>
+                <div class="ps-amount blue">₹50,00,000</div>
+                <ul class="ps-bullets">
+                  <li><span class="ps-bullet-dot b-blue"></span>Interest rates starting at just 9.98%*</li>
+                  <li><span class="ps-bullet-dot b-blue"></span>Digital process &amp; fast approval</li>
+                  <li><span class="ps-bullet-dot b-blue"></span>No branch visit needed</li>
+                </ul>
+                <button class="ps-btn ps-btn-blue">
+                  Apply Now
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <div class="ps-visual">
+                <div class="money-stack">
+                  <div class="money-note mn-1">₹ 500</div>
+                  <div class="money-note mn-2">₹ 500</div>
+                  <div class="money-note mn-3">₹ 500</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2: Free Credit Score -->
+            <div class="promo-slide ps-2">
+              <div class="ps-content">
+                <div class="ps-tag ps-tag-green"><span class="ps-tag-dot g"></span>Free credit check</div>
+                <div class="ps-label">Get Credit Score &amp; Report worth</div>
+                <div class="ps-amount green">₹1,200 FREE</div>
+                <ul class="ps-bullets">
+                  <li><span class="ps-bullet-dot b-green"></span>₹1 Lakh up for grabs — join CPL 2.0</li>
+                  <li><span class="ps-bullet-dot b-green"></span>Instant report, no documents needed</li>
+                  <li><span class="ps-bullet-dot b-green"></span>Trusted by 50,000+ customers</li>
+                </ul>
+                <button class="ps-btn ps-btn-green">
+                  Check Score Now
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <div class="ps-visual">
+                <div class="score-ring-wrap">
+                  <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#scoreGrad)" stroke-width="8"
+                      stroke-dasharray="188" stroke-dashoffset="47" stroke-linecap="round"
+                      transform="rotate(-90 50 50)"/>
+                    <defs>
+                      <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#34d399"/>
+                        <stop offset="100%" stop-color="#6ee7b7"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div class="score-label">
+                    <div class="score-num">800+</div>
+                    <div class="score-sub">Score</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3: Cashback on Credit Cards -->
+            <div class="promo-slide ps-3">
+              <div class="ps-content">
+                <div class="ps-tag ps-tag-orange"><span class="ps-tag-dot o"></span>Shop smart, save more</div>
+                <div class="ps-label">Earn Cashback on</div>
+                <div class="ps-amount orange" style="font-size:26px;">Credit Card Spends</div>
+                <ul class="ps-bullets">
+                  <li><span class="ps-bullet-dot b-orange"></span>Up to 5% cashback on all spends</li>
+                  <li><span class="ps-bullet-dot b-orange"></span>Top cards from HDFC, Axis, ICICI</li>
+                  <li><span class="ps-bullet-dot b-orange"></span>Lifetime free options available</li>
+                </ul>
+                <button class="ps-btn ps-btn-orange">
+                  Apply Now
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <div class="ps-visual">
+                <div class="cashback-circle">
+                  <div class="cb-pct">5%</div>
+                  <div class="cb-lbl">CASH<br>BACK</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4: Credit Card Against FD -->
+            <div class="promo-slide ps-4">
+              <div class="ps-content">
+                <div class="ps-tag ps-tag-purple"><span class="ps-tag-dot p"></span>100% Approval</div>
+                <div class="ps-label">Credit Cards Against Fixed Deposit</div>
+                <div class="ps-amount purple">Zero Risk Card</div>
+                <ul class="ps-bullets">
+                  <li><span class="ps-bullet-dot b-purple"></span>No income proof required</li>
+                  <li><span class="ps-bullet-dot b-purple"></span>Build your credit score from day one</li>
+                  <li><span class="ps-bullet-dot b-purple"></span>Instant issuance, lifetime benefits</li>
+                </ul>
+                <button class="ps-btn ps-btn-purple">
+                  Get Your Card
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+              <div class="ps-visual">
+                <div>
+                  <div class="fd-card-mini">
+                    <div class="fd-card-chip"></div>
+                    <div class="fd-card-num">•••• •••• •••• 4521</div>
+                  </div>
+                  <div class="fd-card-badge">FD-Backed • 100% Safe</div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /promo-slides -->
+
+          <!-- progress bar -->
+          <div class="promo-progress">
+            <div class="promo-progress-bar" id="promoBar"></div>
+          </div>
+        </div><!-- /promo-carousel -->
+
+        <!-- dots -->
+        <div class="promo-dots" id="promoDots">
+          <button class="promo-dot active"></button>
+          <button class="promo-dot"></button>
+          <button class="promo-dot"></button>
+          <button class="promo-dot"></button>
+        </div>
+
+      </div><!-- /promo-carousel-wrap -->
+    </div><!-- /hero-right -->
+
+  </div>
+</div>
+
+<!-- FLOATING SEARCH PANEL -->
+<div class="search-panel-wrap">
+  <div class="search-panel">
+    <div class="search-tabs" id="sTabs">
+      <div class="s-tab active" onclick="setStab(this)"><div class="s-tab-icon">👤</div>Personal Loan</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">💳</div>Credit Card</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">🏢</div>Business Loan</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">🏠</div>Home Loan</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">🏗️</div>Loan Against Property</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">🌱</div>Micro Loan</div>
+      <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">📄</div>Tax Filing</div>
+    </div>
+    <div class="search-body">
+      <div class="s-field">
+        <label>Loan Amount</label>
+        <select><option>₹1 Lakh – ₹5 Lakhs</option><option>₹5 Lakhs – ₹20 Lakhs</option><option>₹20 Lakhs – ₹50 Lakhs</option><option>₹50 Lakhs+</option></select>
+      </div>
+      <div class="s-field">
+        <label>Employment Type</label>
+        <select><option>Salaried</option><option>Self Employed</option><option>Business Owner</option></select>
+      </div>
+      <div class="s-field">
+        <label>Monthly Income</label>
+        <select><option>₹25K – ₹50K</option><option>₹50K – ₹1L</option><option>₹1L – ₹3L</option><option>₹3L+</option></select>
+      </div>
+      <div class="s-field">
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter your mobile" />
+      </div>
+      <button class="btn-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        Check Offers
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- LENDER LOGOS -->
+<div class="logos-strip reveal">
+  <span class="logos-label">Trusted by</span>
+  <div class="logos-divider"></div>
+  <div class="logos-track">
+    <div class="logos-inner" id="logosInner"></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">What We Offer</span></div>
+  <div class="sec-title">Our <em>Services</em></div>
+  <div class="sec-sub">Everything you need to manage your financial life in one powerful platform</div>
+  <div class="services-grid stagger">
+    <div class="svc-card">
+      <div class="svc-card-hero c1">
+        <div class="svc-card-bg-icon">💰</div>
+        <div class="svc-card-main-icon">💸</div>
+        <div class="svc-badge">Most Popular</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Personal Loans</div>
+        <div class="svc-card-title">Achieve your goals with easy personal loans</div>
+        <div class="svc-card-feats">
+          <div class="svc-feat">✅ Low Interest Rates</div>
+          <div class="svc-feat">⚡ Instant Disbursal</div>
+          <div class="svc-feat">📋 Min Documents</div>
+        </div>
+        <button class="svc-cta c1">Apply Now</button>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-hero c2">
+        <div class="svc-card-bg-icon">📈</div>
+        <div class="svc-card-main-icon">🚀</div>
+        <div class="svc-badge">Up to ₹50L</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Business Loans</div>
+        <div class="svc-card-title">Grow your business with tailored funding solutions</div>
+        <div class="svc-card-feats">
+          <div class="svc-feat">💼 Up to ₹50L</div>
+          <div class="svc-feat">📊 Flexible Terms</div>
+          <div class="svc-feat">🤝 Expert Help</div>
+        </div>
+        <button class="svc-cta c2">Apply Now</button>
+      </div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-card-hero c3">
+        <div class="svc-card-bg-icon">🏠</div>
+        <div class="svc-card-main-icon">🏡</div>
+        <div class="svc-badge">Best Rates</div>
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-card-tag">Home Loans</div>
+        <div class="svc-card-title">Turn your dream home into reality with best rates</div>
+        <div class="svc-card-feats">
+          <div class="svc-feat">🎯 Best Rates</div>
+          <div class="svc-feat">🤖 AI-Driven</div>
+          <div class="svc-feat">🏆 Top Lenders</div>
+        </div>
+        <button class="svc-cta c3">Apply Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip reveal">
+  <div class="stat-box"><div class="stat-num" data-target="50000" data-suffix="K+">0</div><div class="stat-lbl">Happy Customers</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="1000" data-suffix="+">0</div><div class="stat-lbl">Lending Partners</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="500" data-prefix="₹" data-suffix="Cr+">0</div><div class="stat-lbl">Loans Disbursed</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="4.8" data-suffix="★" data-decimal="1">0</div><div class="stat-lbl">Average Rating</div></div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section products-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Product Range</span></div>
+  <div class="sec-title">Loans & <em>Credit Cards</em></div>
+  <div class="sec-sub">Find the perfect financial product tailored to your unique needs</div>
+  <div class="products-grid stagger">
+    <div class="prod-card">
+      <div class="prod-icon blue">👤</div>
+      <div class="prod-title">Personal Loan</div>
+      <div class="prod-desc">Achieve your goals with easy personal loans. Quick approval, low rates, minimal paperwork.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">10.5% p.a.</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon orange">🏢</div>
+      <div class="prod-title">Business Loan</div>
+      <div class="prod-desc">Grow your business with tailored loans designed for entrepreneurs and SMEs.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">12% p.a.</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon green">🏠</div>
+      <div class="prod-title">Home Loan</div>
+      <div class="prod-desc">Turn your dream home into reality with our flexible AI-matched home loans.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">8.4% p.a.</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon purple">🌱</div>
+      <div class="prod-title">Micro Loan</div>
+      <div class="prod-desc">Kickstart your project with quick microloans. Small ticket, big dreams, fast disbursal.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">14% p.a.</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon teal">💳</div>
+      <div class="prod-title">Credit Card</div>
+      <div class="prod-desc">Enjoy perks and rewards with our smart AI-matched credit cards from top issuers.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Up to</span><span class="prod-rate-val">5% Cashback</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-icon red">🏗️</div>
+      <div class="prod-title">Loan Against Property</div>
+      <div class="prod-desc">Unlock the value in your property with best-in-class rates and flexible repayment.</div>
+      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">9% p.a.</span></div>
+      <div class="prod-arrow">Apply Now →</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">The Process</span></div>
+  <div class="sec-title">Apply in <em style="color:#60a5fa">3 Easy Steps</em></div>
+  <div class="sec-sub">Our AI-powered process makes getting a loan faster than ever before</div>
+  <div class="how-grid stagger">
+    <div class="how-connector"></div>
+    <div class="how-connector how-connector2"></div>
+    <div class="step-card">
+      <div class="step-badge">1</div>
+      <div class="step-icon">📝</div>
+      <div class="step-title">Fill Your Details</div>
+      <div class="step-desc">Share your basic info and loan requirements. Takes less than 2 minutes on any device, no uploads needed.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-badge">2</div>
+      <div class="step-icon">🤖</div>
+      <div class="step-title">AI Matches Offers</div>
+      <div class="step-desc">Our smart AI scans 1000+ lenders instantly and presents the best personalized offers just for you.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-badge">3</div>
+      <div class="step-icon">🏦</div>
+      <div class="step-title">Get Approved & Funded</div>
+      <div class="step-desc">Choose your offer, complete e-KYC digitally, and receive funds directly in your bank account within hours.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TAX -->
+<section class="section tax-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Tax Services</span></div>
+  <div class="sec-title">Tax Filing <em>Made Easy</em></div>
+  <div class="sec-sub">Hassle-free income tax and GST filing from the comfort of your home</div>
+  <div class="tax-grid stagger">
+    <div class="tax-card">
+      <div class="tax-icon blue">📋</div>
+      <div class="tax-body">
+        <h3>Income Tax Filing</h3>
+        <p>File your ITR accurately and on time with expert CA assistance. Simple, fast, and 100% error-free with our AI-guided process for salaried and business individuals.</p>
+        <div class="tax-cta">Get Started →</div>
+      </div>
+    </div>
+    <div class="tax-card">
+      <div class="tax-icon green">🧾</div>
+      <div class="tax-body">
+        <h3>GST Filing</h3>
+        <p>Automate your GSTR filings, manage compliance, and avoid penalties with our intelligent GST management platform. Built for modern businesses.</p>
+        <div class="tax-cta">Get Started →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testi-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Reviews</span></div>
+  <div class="sec-title">Hear from Our <em style="color:#60a5fa">Clients</em></div>
+  <div class="sec-sub" style="margin-bottom:32px">10,000+ happy customers trust CreditExchange with their finances</div>
+  <div class="testi-track">
+    <div class="testi-inner" id="testiInner"></div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<div class="partners-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Our Network</span></div>
+  <div class="sec-title">Trusted <em>Collaborations</em></div>
+  <div class="sec-sub" style="margin-bottom:0">Partnerships with India's leading financial institutions</div>
+  <div class="prt-track">
+    <div class="prt-inner" id="prtInner"></div>
+  </div>
+</div>
+
+<!-- HELP -->
+<div class="help-section reveal">
+  <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Support</span></div>
+  <div class="sec-title">Need <em style="color:#60a5fa">Help?</em></div>
+  <div class="help-grid stagger">
+    <div class="help-card">
+      <div class="help-icon bl">💬</div>
+      <div class="help-text"><h4>Chat With Us</h4><p>AI assistant available 24/7 instantly</p></div>
+      <div class="help-arr">›</div>
+    </div>
+    <div class="help-card">
+      <div class="help-icon or">📞</div>
+      <div class="help-text"><h4>Request a Callback</h4><p>Our team will contact you shortly</p></div>
+      <div class="help-arr">›</div>
+    </div>
+    <div class="help-card">
+      <div class="help-icon gr">❓</div>
+      <div class="help-text"><h4>FAQs</h4><p>Get your doubts cleared instantly</p></div>
+      <div class="help-arr">›</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-wrap reveal">
+  <div class="cta-banner">
+    <div class="cta-text">
+      <h2>Let's Manage Your Loans Smartly!</h2>
+      <p>AI finds your perfect loan while you relax. Apply once, get matched with 1000+ lenders instantly.</p>
+    </div>
+    <button class="btn-cta-final">Apply Now — Free</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo-row">
+        <div class="footer-logo-mark">CE</div>
+        <div class="footer-logo-name">Credit<em>Exchange</em></div>
+      </div>
+      <p class="footer-desc">CreditExchange leverages advanced AI to make loan applications simple, fast, and accessible for everyone. One application, thousands of lenders, unbeatable rates.</p>
+      <div class="footer-contact">
+        <p>📍 First Floor, U2, CyberPark Sector 24, Gurugram, Haryana 122002</p>
+        <p style="margin-top:5px">✉️ support@creditexchange.ai</p>
+        <p style="margin-top:5px">📞 +91 9267943806</p>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Loan Products</h4>
+      <a href="#">Personal Loan</a>
+      <a href="#">Business Loan</a>
+      <a href="#">Home Loan</a>
+      <a href="#">Micro Loan</a>
+      <a href="#">Credit Card</a>
+      <a href="#">Loan Against Property</a>
+    </div>
+    <div class="footer-col">
+      <h4>Tax Services</h4>
+      <a href="#">Income Tax Filing</a>
+      <a href="#">GST Filing</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Partner with Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Refund Policy</a>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <div class="social-links" style="margin-bottom:14px">
+        <a class="social-link" href="#">f</a>
+        <a class="social-link" href="#">𝕏</a>
+        <a class="social-link" href="#">📷</a>
+        <a class="social-link" href="#">in</a>
+      </div>
+      <a href="#">Book Appointment</a>
+      <a href="#">Careers</a>
+      <a href="#">Investors</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 PruFin Ventures Private Limited. All Rights Reserved.</span>
+    <span>Made with ❤️ in India 🇮🇳</span>
+  </div>
+</footer>
+
+<script>
+/* ── Tab switcher ── */
+function setStab(el){
+  document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+/* ── PREMIUM CAROUSEL ── */
+(function(){
+  const TOTAL = 4;
+  const INTERVAL = 2500; // ms per slide
+  let cur = 0;
+  let timer = null;
+  let barTimer = null;
+
+  const slides  = document.getElementById('promoSlides');
+  const dots    = document.querySelectorAll('.promo-dot');
+  const bar     = document.getElementById('promoBar');
+  const prevBtn = document.getElementById('promoPrev');
+  const nextBtn = document.getElementById('promoNext');
+
+  function goTo(n, restart){
+    cur = (n + TOTAL) % TOTAL;
+    slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
+    dots.forEach((d,i) => d.classList.toggle('active', i === cur));
+    if(restart !== false) resetBar();
+  }
+
+  function resetBar(){
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+    clearTimeout(barTimer);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        bar.style.transition = 'width ' + INTERVAL + 'ms linear';
+        bar.style.width = '100%';
+      });
+    });
+  }
+
+  function startAuto(){
+    clearInterval(timer);
+    timer = setInterval(() => goTo(cur + 1), INTERVAL);
+  }
+
+  function stopAuto(){
+    clearInterval(timer);
+    bar.style.transition = 'none';
+  }
+
+  /* dot clicks */
+  dots.forEach((d,i) => {
+    d.addEventListener('click', () => {
+      goTo(i);
+      stopAuto();
+      startAuto();
+    });
+  });
+
+  /* arrow clicks */
+  prevBtn.addEventListener('click', () => { goTo(cur - 1); stopAuto(); startAuto(); });
+  nextBtn.addEventListener('click', () => { goTo(cur + 1); stopAuto(); startAuto(); });
+
+  /* pause on hover */
+  const wrap = document.querySelector('.promo-carousel');
+  wrap.addEventListener('mouseenter', stopAuto);
+  wrap.addEventListener('mouseleave', () => { resetBar(); startAuto(); });
+
+  /* kick off */
+  goTo(0, false);
+  resetBar();
+  startAuto();
+})();
+
+/* ── Logos ── */
+const logos=['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance','Power Finance Corp','HUL'];
+const lI=document.getElementById('logosInner');
+lI.innerHTML=[...logos,...logos].map(l=>`<div class="logo-chip">${l}</div>`).join('');
+
+/* ── Testimonials ── */
+const testis=[
+  {name:'Anita Verma',init:'AV',title:'Transparent & Trustworthy',text:'No hidden fees, no surprise charges. The AI platform showed me exactly what I qualified for. Completely transparent.'},
+  {name:'Sachin Saini',init:'SS',title:'A Game Changer for Loans',text:'CreditExchange made getting a loan incredibly simple and fast. The AI-driven platform understood my needs perfectly.'},
+  {name:'Priya K',init:'PK',title:'Finally, the Real Loan Helper',text:'The AI technology is impressive — it found me the best rates and guided me through the entire process.'},
+  {name:'Sumeet Deshpande',init:'SD',title:'Best Rates Around!',text:'I saved a lot on my loan thanks to their AI that compared multiple lenders and presented the most competitive options.'},
+  {name:'Rahul Sharma',init:'RS',title:'Exceptional Customer Service',text:'Outstanding support team available 24/7 to answer my questions. Got approved within hours of applying!'},
+  {name:'Meena Patel',init:'MP',title:'5 Star Experience',text:'Applied in the morning and had money in my account by afternoon. Seamless process and unbeatable rates.'},
+];
+const tI=document.getElementById('testiInner');
+tI.innerHTML=[...testis,...testis].map(t=>`
+  <div class="testi-card">
+    <div class="testi-stars">★★★★★</div>
+    <div class="testi-title">${t.title}</div>
+    <div class="testi-text">"${t.text}"</div>
+    <div class="testi-author">
+      <div class="testi-avatar">${t.init}</div>
+      <div><div class="testi-name">${t.name}</div><div class="testi-role">Verified Customer</div></div>
+    </div>
+  </div>`).join('');
+
+/* ── Partners ── */
+const partners=['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance'];
+const pI=document.getElementById('prtInner');
+pI.innerHTML=[...partners,...partners].map(p=>`<div class="prt-chip">${p}</div>`).join('');
+
+/* ── Intersection Observer ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      if(e.target.classList.contains('stats-strip')) startCounters();
+    }
+  });
+},{threshold:0.08});
+document.querySelectorAll('.reveal,.stagger').forEach(el=>obs.observe(el));
+
+/* ── Counter animation ── */
+let counted=false;
+function startCounters(){
+  if(counted)return; counted=true;
+  document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
+    const target=parseFloat(el.dataset.target);
+    const suffix=el.dataset.suffix||'';
+    const prefix=el.dataset.prefix||'';
+    const dec=parseInt(el.dataset.decimal)||0;
+    const duration=1600, steps=60;
+    const increment=target/steps;
+    let current=0;
+    const t=setInterval(()=>{
+      current+=increment;
+      if(current>=target){current=target;clearInterval(t);}
+      el.textContent=prefix+(dec>0?current.toFixed(dec):Math.round(current))+suffix;
+    },duration/steps);
+  });
+}
+
+/* ── Parallax ── */
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  const g1=document.querySelector('.hero-glow1');
+  const g2=document.querySelector('.hero-glow2');
+  if(g1)g1.style.transform=`translateY(${y*0.2}px)`;
+  if(g2)g2.style.transform=`translateY(${y*-0.15}px)`;
+});
+</script>
+</body>
+</html>

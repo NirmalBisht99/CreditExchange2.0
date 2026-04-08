@@ -46,205 +46,210 @@ nav{
   transition:background 0.3s;
 }
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:44px;}
-.nav-logo-mark{
-  width:38px;height:38px;border-radius:10px;
-  background:linear-gradient(135deg,#1540a0,#3b82f6);
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:800;color:white;letter-spacing:-0.5px;
-}
+.nav-logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#1540a0,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;letter-spacing:-0.5px;}
 .nav-logo-text{font-weight:800;font-size:17px;color:white;letter-spacing:-0.3px;}
 .nav-logo-text em{font-style:normal;color:var(--accent);}
 .nav-links{display:flex;gap:2px;flex:1;}
-.nav-link{
-  padding:7px 14px;border-radius:8px;font-size:13.5px;font-weight:500;
-  color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.18s;text-decoration:none;
-  display:flex;align-items:center;gap:3px;
-}
+.nav-link{padding:7px 14px;border-radius:8px;font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.65);cursor:pointer;transition:all 0.18s;text-decoration:none;display:flex;align-items:center;gap:3px;}
 .nav-link:hover{background:rgba(255,255,255,0.07);color:white;}
 .nav-link svg{width:12px;height:12px;opacity:0.5;}
 .nav-actions{display:flex;align-items:center;gap:8px;}
-.btn-ghost{
-  padding:8px 18px;border-radius:8px;font-size:13.5px;font-weight:600;
-  color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.18);background:transparent;
-  cursor:pointer;font-family:inherit;transition:all 0.18s;
-}
+.btn-ghost{padding:8px 18px;border-radius:8px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.18);background:transparent;cursor:pointer;font-family:inherit;transition:all 0.18s;}
 .btn-ghost:hover{background:rgba(255,255,255,0.09);color:white;}
-.btn-nav-cta{
-  padding:8px 20px;border-radius:8px;font-size:13.5px;font-weight:700;
-  color:white;background:var(--accent);border:none;cursor:pointer;
-  font-family:inherit;transition:all 0.2s;display:flex;align-items:center;gap:6px;
-}
+.btn-nav-cta{padding:8px 20px;border-radius:8px;font-size:13.5px;font-weight:700;color:white;background:var(--accent);border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
 .btn-nav-cta:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 4px 18px rgba(249,115,22,0.38);}
-.nav-location{
-  display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;
-  color:rgba(255,255,255,0.7);cursor:pointer;padding:6px 12px;border-radius:8px;
-  border:1px solid rgba(255,255,255,0.14);margin-right:6px;transition:all 0.18s;
-}
+.nav-location{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.7);cursor:pointer;padding:6px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.14);margin-right:6px;transition:all 0.18s;}
 .nav-location:hover{background:rgba(255,255,255,0.07);color:white;}
 .nav-location svg{width:14px;height:14px;color:#60a5fa;}
 
 /* ── HERO ── */
 .hero{
-  margin-top:66px;
-  min-height:600px;
-  position:relative;overflow:hidden;
-  background:var(--navy);
-  display:flex;align-items:center;
+  margin-top:66px;min-height:640px;position:relative;overflow:hidden;
+  background:var(--navy);display:flex;align-items:center;
 }
 .hero-grid-bg{
   position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);
+  background-image:linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);
   background-size:48px 48px;
   mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 40%,transparent 100%);
 }
-.hero-glow1{
-  position:absolute;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 70%);
-  top:-200px;left:-100px;
-}
-.hero-glow2{
-  position:absolute;
-  width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(249,115,22,0.12) 0%,transparent 65%);
-  bottom:-100px;right:100px;
-}
-.hero-inner{
-  position:relative;z-index:5;width:100%;
-  padding:72px 44px 80px;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;
-}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.28);
-  color:#fbbf78;padding:5px 16px 5px 10px;border-radius:100px;
-  font-size:12.5px;font-weight:600;margin-bottom:24px;letter-spacing:0.02em;
-}
-.badge-pulse{
-  width:7px;height:7px;border-radius:50%;background:#fb923c;
-  animation:bpulse 1.8s ease-in-out infinite;
-}
+.hero-glow1{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 70%);top:-200px;left:-100px;}
+.hero-glow2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.12) 0%,transparent 65%);bottom:-100px;right:100px;}
+.hero-inner{position:relative;z-index:5;width:100%;padding:72px 44px 80px;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:48px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.28);color:#fbbf78;padding:5px 16px 5px 10px;border-radius:100px;font-size:12.5px;font-weight:600;margin-bottom:24px;letter-spacing:0.02em;}
+.badge-pulse{width:7px;height:7px;border-radius:50%;background:#fb923c;animation:bpulse 1.8s ease-in-out infinite;}
 @keyframes bpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.3;transform:scale(0.65);}}
-.hero h1{
-  font-size:clamp(34px,4.8vw,56px);font-weight:800;
-  color:white;line-height:1.08;margin-bottom:20px;letter-spacing:-1.5px;
-}
-.hero h1 .hi{
-  background:linear-gradient(100deg,#60a5fa 0%,#a5c8ff 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
+.hero h1{font-size:clamp(34px,4.8vw,56px);font-weight:800;color:white;line-height:1.08;margin-bottom:20px;letter-spacing:-1.5px;}
+.hero h1 .hi{background:linear-gradient(100deg,#60a5fa 0%,#a5c8ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-sub{font-size:16px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:32px;max-width:440px;}
 .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;}
-.hero-pill{
-  display:flex;align-items:center;gap:7px;
-  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.11);
-  color:rgba(255,255,255,0.7);padding:7px 15px;border-radius:100px;font-size:13px;font-weight:500;
-  transition:all 0.2s;cursor:default;
-}
+.hero-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.11);color:rgba(255,255,255,0.7);padding:7px 15px;border-radius:100px;font-size:13px;font-weight:500;transition:all 0.2s;cursor:default;}
 .hero-pill:hover{background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.2);}
 .hero-pill-dot{width:6px;height:6px;border-radius:50%;}
 .hero-pill-dot.g{background:#34d399;}
 .hero-pill-dot.o{background:#fb923c;}
 .hero-pill-dot.b{background:#60a5fa;}
 .hero-btns{display:flex;gap:12px;align-items:center;}
-.btn-hero{
-  padding:15px 32px;border-radius:10px;font-size:15px;font-weight:700;
-  cursor:pointer;font-family:inherit;transition:all 0.22s;border:none;
-}
+.btn-hero{padding:15px 32px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.22s;border:none;}
 .btn-hero-fill{background:var(--accent);color:white;}
 .btn-hero-fill:hover{background:var(--accent-h);transform:translateY(-2px);box-shadow:0 10px 28px rgba(249,115,22,0.38);}
-.btn-hero-outline{
-  background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);
-  border:1.5px solid rgba(255,255,255,0.18)!important;backdrop-filter:blur(8px);
-}
+.btn-hero-outline{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.85);border:1.5px solid rgba(255,255,255,0.18)!important;backdrop-filter:blur(8px);}
 .btn-hero-outline:hover{background:rgba(255,255,255,0.12);border-color:rgba(255,255,255,0.35)!important;}
 
 /* ══════════════════════════════════════════
-   PREMIUM BANNER CAROUSEL  (hero-right)
+   PREMIUM CAROUSEL — UPGRADED
 ══════════════════════════════════════════ */
 .hero-right{
   position:relative;
   display:flex;align-items:center;justify-content:center;
+  padding: 20px 0;
+}
+
+/* Floating orb decorations around carousel */
+.carousel-orb{
+  position:absolute;border-radius:50%;pointer-events:none;z-index:0;
+}
+.carousel-orb-1{
+  width:180px;height:180px;
+  background:radial-gradient(circle,rgba(59,130,246,0.25) 0%,transparent 70%);
+  top:-30px;right:-40px;
+  animation:orbFloat1 6s ease-in-out infinite;
+}
+.carousel-orb-2{
+  width:120px;height:120px;
+  background:radial-gradient(circle,rgba(249,115,22,0.22) 0%,transparent 70%);
+  bottom:-20px;left:-30px;
+  animation:orbFloat2 8s ease-in-out infinite;
+}
+.carousel-orb-3{
+  width:80px;height:80px;
+  background:radial-gradient(circle,rgba(167,139,250,0.3) 0%,transparent 70%);
+  top:40%;right:-50px;
+  animation:orbFloat3 5s ease-in-out infinite;
+}
+@keyframes orbFloat1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-12px,16px) scale(1.1);}}
+@keyframes orbFloat2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(10px,-14px) scale(0.9);}}
+@keyframes orbFloat3{0%,100%{transform:translate(0,0);}50%{transform:translate(8px,10px);}}
+
+/* Particle dots */
+.carousel-particle{
+  position:absolute;border-radius:50%;pointer-events:none;z-index:0;
+  animation:particleDrift 4s ease-in-out infinite;
+}
+@keyframes particleDrift{
+  0%,100%{opacity:0.4;transform:translateY(0);}
+  50%{opacity:1;transform:translateY(-8px);}
+}
+
+/* Outer ring pulse */
+.carousel-ring{
+  position:absolute;
+  border-radius:28px;
+  border:1px solid rgba(59,130,246,0.2);
+  inset:-12px;
+  pointer-events:none;z-index:0;
+  animation:ringPulse 3s ease-in-out infinite;
+}
+.carousel-ring-2{
+  inset:-22px;
+  border-color:rgba(59,130,246,0.1);
+  animation:ringPulse 3s ease-in-out infinite 1s;
+}
+@keyframes ringPulse{
+  0%,100%{opacity:0.5;transform:scale(1);}
+  50%{opacity:1;transform:scale(1.01);}
 }
 
 .promo-carousel-wrap{
-  width:100%;max-width:460px;
+  width:100%;max-width:520px;
   position:relative;
+  z-index:2;
 }
 
-/* subtle outer glow ring */
+/* Glow border effect */
 .promo-carousel-wrap::before{
   content:'';
-  position:absolute;inset:-3px;
-  border-radius:22px;
-  background:linear-gradient(135deg,rgba(59,130,246,0.35),rgba(249,115,22,0.25),rgba(59,130,246,0.1));
+  position:absolute;inset:-2px;
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(59,130,246,0.5),rgba(249,115,22,0.3),rgba(167,139,250,0.4));
   z-index:0;
   filter:blur(1px);
+  animation:borderGlow 4s ease-in-out infinite;
+}
+@keyframes borderGlow{
+  0%,100%{opacity:0.7;filter:blur(1px);}
+  50%{opacity:1;filter:blur(2px);}
 }
 
 .promo-carousel{
   position:relative;z-index:1;
-  border-radius:20px;
+  border-radius:22px;
   overflow:hidden;
-  box-shadow:0 32px 80px rgba(4,13,30,0.7),0 0 0 1px rgba(255,255,255,0.08);
+  box-shadow:0 40px 100px rgba(4,13,30,0.8),0 0 0 1px rgba(255,255,255,0.08);
 }
 
 .promo-slides{
   display:flex;
-  transition:transform 0.55s cubic-bezier(0.4,0,0.2,1);
+  transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);
   will-change:transform;
 }
 
 .promo-slide{
   min-width:100%;
-  height:260px;
+  height:320px;
   position:relative;
   overflow:hidden;
   display:flex;
-  align-items:center;
-  padding:28px 30px;
+  align-items:stretch;
+  padding:0;
   box-sizing:border-box;
 }
 
-/* slide themes */
-.ps-1{background:linear-gradient(130deg,#081836 0%,#0e2d6b 55%,#1354b8 100%);}
-.ps-2{background:linear-gradient(130deg,#022414 0%,#084d2a 55%,#0b6b3a 100%);}
-.ps-3{background:linear-gradient(130deg,#2d0d00 0%,#7a2200 55%,#b03200 100%);}
-.ps-4{background:linear-gradient(130deg,#120c2e 0%,#1e1060 50%,#2a1590 100%);}
+/* Slide themes */
+.ps-1{background:linear-gradient(140deg,#050f2a 0%,#0e2d6b 50%,#1354b8 100%);}
+.ps-2{background:linear-gradient(140deg,#021910 0%,#063d22 50%,#0a5e35 100%);}
+.ps-3{background:linear-gradient(140deg,#1e0800 0%,#6b1a03 50%,#a83002 100%);}
+.ps-4{background:linear-gradient(140deg,#0d0820 0%,#1a0e52 50%,#261380 100%);}
 
-/* grid dot bg overlay */
+/* Grid overlay */
 .promo-slide::before{
-  content:'';
-  position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
-  background-size:28px 28px;
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:32px 32px;
   mask-image:radial-gradient(ellipse 100% 100% at 50% 0%,black 40%,transparent 100%);
   pointer-events:none;
 }
 
-/* glow orb */
+/* Glow orb per slide */
 .promo-slide::after{
-  content:'';
-  position:absolute;
-  width:240px;height:240px;border-radius:50%;
-  top:-80px;right:-40px;
-  pointer-events:none;
+  content:'';position:absolute;
+  width:280px;height:280px;border-radius:50%;
+  top:-80px;right:-60px;pointer-events:none;
 }
-.ps-1::after{background:radial-gradient(circle,rgba(59,130,246,0.28) 0%,transparent 70%);}
-.ps-2::after{background:radial-gradient(circle,rgba(0,230,118,0.2) 0%,transparent 70%);}
-.ps-3::after{background:radial-gradient(circle,rgba(255,112,0,0.28) 0%,transparent 70%);}
-.ps-4::after{background:radial-gradient(circle,rgba(120,80,255,0.28) 0%,transparent 70%);}
+.ps-1::after{background:radial-gradient(circle,rgba(59,130,246,0.3) 0%,transparent 70%);}
+.ps-2::after{background:radial-gradient(circle,rgba(0,230,118,0.22) 0%,transparent 70%);}
+.ps-3::after{background:radial-gradient(circle,rgba(255,112,0,0.3) 0%,transparent 70%);}
+.ps-4::after{background:radial-gradient(circle,rgba(120,80,255,0.3) 0%,transparent 70%);}
 
-.ps-content{flex:1;position:relative;z-index:2;}
+/* Slide inner layout */
+.ps-left{
+  flex:1;
+  padding:30px 26px 30px 30px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;z-index:2;
+}
+.ps-right{
+  width:170px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:2;
+  padding:20px 16px;
+  flex-shrink:0;
+}
 
 .ps-tag{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
-  padding:4px 12px;border-radius:100px;margin-bottom:10px;
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:10.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:5px 13px;border-radius:100px;margin-bottom:12px;width:fit-content;
 }
 .ps-tag-blue{background:rgba(59,130,246,0.18);border:1px solid rgba(59,130,246,0.35);color:#93c5fd;}
 .ps-tag-green{background:rgba(0,230,100,0.12);border:1px solid rgba(0,230,100,0.28);color:#6ee7b7;}
@@ -257,18 +262,15 @@ nav{
 .ps-tag-dot.o{background:#fb923c;}
 .ps-tag-dot.p{background:#a78bfa;}
 
-.ps-label{font-size:13px;font-weight:500;color:rgba(255,255,255,0.6);margin-bottom:4px;line-height:1.3;}
-.ps-amount{font-size:30px;font-weight:800;line-height:1;margin-bottom:12px;letter-spacing:-0.5px;}
+.ps-label{font-size:13.5px;font-weight:500;color:rgba(255,255,255,0.55);margin-bottom:5px;line-height:1.3;}
+.ps-amount{font-size:32px;font-weight:800;line-height:1;margin-bottom:14px;letter-spacing:-0.5px;}
 .ps-amount.blue{color:#93c5fd;}
 .ps-amount.green{color:#6ee7b7;}
 .ps-amount.orange{color:#fdba74;}
 .ps-amount.purple{color:#c4b5fd;}
 
-.ps-bullets{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-direction:column;gap:5px;}
-.ps-bullets li{
-  font-size:11.5px;color:rgba(255,255,255,0.6);
-  display:flex;align-items:center;gap:6px;
-}
+.ps-bullets{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:7px;}
+.ps-bullets li{font-size:12px;color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:7px;}
 .ps-bullet-dot{width:4px;height:4px;border-radius:50%;flex-shrink:0;}
 .b-blue{background:#60a5fa;}
 .b-green{background:#34d399;}
@@ -276,194 +278,265 @@ nav{
 .b-purple{background:#a78bfa;}
 
 .ps-btn{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:9px 22px;border-radius:100px;
-  font-size:12.5px;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 24px;border-radius:100px;
+  font-size:13px;font-weight:700;
   border:none;cursor:pointer;
   font-family:'Plus Jakarta Sans',sans-serif;
   transition:transform 0.18s,box-shadow 0.18s;
-  letter-spacing:0.02em;
+  letter-spacing:0.02em;width:fit-content;
 }
 .ps-btn:hover{transform:translateY(-2px);}
 .ps-btn-blue{background:linear-gradient(90deg,#2563eb,#3b82f6);color:white;box-shadow:0 6px 20px rgba(37,99,235,0.45);}
-.ps-btn-blue:hover{box-shadow:0 10px 28px rgba(37,99,235,0.55);}
+.ps-btn-blue:hover{box-shadow:0 10px 28px rgba(37,99,235,0.6);}
 .ps-btn-green{background:linear-gradient(90deg,#059669,#10b981);color:white;box-shadow:0 6px 20px rgba(5,150,105,0.45);}
-.ps-btn-green:hover{box-shadow:0 10px 28px rgba(5,150,105,0.55);}
+.ps-btn-green:hover{box-shadow:0 10px 28px rgba(5,150,105,0.6);}
 .ps-btn-orange{background:linear-gradient(90deg,#ea580c,#f97316);color:white;box-shadow:0 6px 20px rgba(234,88,12,0.45);}
-.ps-btn-orange:hover{box-shadow:0 10px 28px rgba(234,88,12,0.55);}
+.ps-btn-orange:hover{box-shadow:0 10px 28px rgba(234,88,12,0.6);}
 .ps-btn-purple{background:linear-gradient(90deg,#7c3aed,#8b5cf6);color:white;box-shadow:0 6px 20px rgba(124,58,237,0.45);}
-.ps-btn-purple:hover{box-shadow:0 10px 28px rgba(124,58,237,0.55);}
-.ps-btn svg{width:13px;height:13px;}
+.ps-btn-purple:hover{box-shadow:0 10px 28px rgba(124,58,237,0.6);}
+.ps-btn svg{width:14px;height:14px;}
 
-/* right visual panels */
-.ps-visual{
-  position:relative;z-index:2;
-  flex-shrink:0;width:130px;
-  display:flex;align-items:center;justify-content:center;
-}
-
-/* Slide 1 — stacked money notes */
-.money-stack{display:flex;flex-direction:column;gap:5px;align-items:center;}
-.money-note{
-  width:94px;height:36px;border-radius:6px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:11px;font-weight:700;color:rgba(255,255,255,0.9);
-  position:relative;overflow:hidden;
-}
-.mn-1{background:linear-gradient(135deg,#1d6e2a,#2da83d);box-shadow:0 3px 12px rgba(0,0,0,0.4);}
-.mn-2{background:linear-gradient(135deg,#176021,#248f34);box-shadow:0 3px 12px rgba(0,0,0,0.4);transform:translateX(5px);}
-.mn-3{background:linear-gradient(135deg,#10501a,#1d7529);box-shadow:0 3px 12px rgba(0,0,0,0.4);transform:translateX(-5px);}
-.money-note::before{content:'₹';position:absolute;font-size:38px;font-weight:800;opacity:0.07;right:-4px;}
-
-/* Slide 2 — credit score gauge */
-.score-ring-wrap{position:relative;width:100px;height:100px;}
-.score-ring-wrap svg{width:100px;height:100px;}
-.score-label{
-  position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-}
-.score-num{font-size:22px;font-weight:800;color:#6ee7b7;line-height:1;}
-.score-sub{font-size:9px;color:rgba(255,255,255,0.45);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;}
-
-/* Slide 3 — cashback badge */
-.cashback-circle{
-  width:108px;height:108px;border-radius:50%;
-  background:rgba(255,255,255,0.06);
-  border:2px solid rgba(255,150,0,0.3);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
+/* ── SLIDE 1: Animated Money Stack ── */
+.money-scene{
+  display:flex;flex-direction:column;align-items:center;gap:0;
   position:relative;
 }
-.cashback-circle::before{
-  content:'';position:absolute;inset:-6px;border-radius:50%;
-  border:1.5px dashed rgba(255,150,0,0.2);
-  animation:spinSlow 12s linear infinite;
+.money-note{
+  width:118px;height:54px;border-radius:8px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 12px;
+  position:relative;overflow:hidden;
+  box-shadow:0 6px 20px rgba(0,0,0,0.5);
+  transition:transform 0.3s;
 }
-@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-.cb-pct{font-size:32px;font-weight:800;color:#fdba74;line-height:1;}
-.cb-lbl{font-size:9px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px;}
+.money-note:nth-child(1){background:linear-gradient(135deg,#1d6e2a,#2da83d);margin-bottom:-8px;z-index:3;animation:noteFloat1 3s ease-in-out infinite;}
+.money-note:nth-child(2){background:linear-gradient(135deg,#176021,#248f34);margin-bottom:-8px;z-index:2;transform:translateX(6px);animation:noteFloat2 3s ease-in-out infinite 0.4s;}
+.money-note:nth-child(3){background:linear-gradient(135deg,#10501a,#1d7529);z-index:1;transform:translateX(-6px);animation:noteFloat3 3s ease-in-out infinite 0.8s;}
+@keyframes noteFloat1{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-4px) rotate(0.5deg);}}
+@keyframes noteFloat2{0%,100%{transform:translateX(6px) translateY(0);}50%{transform:translateX(6px) translateY(-3px);}}
+@keyframes noteFloat3{0%,100%{transform:translateX(-6px) translateY(0);}50%{transform:translateX(-6px) translateY(-2px);}}
+.mn-rupee{font-size:22px;font-weight:800;color:rgba(255,255,255,0.9);}
+.mn-val{font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);text-align:right;line-height:1.3;}
+.mn-stripe{position:absolute;top:0;bottom:0;left:38px;width:1px;background:rgba(255,255,255,0.1);}
+.note-shine{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.08) 50%,transparent 60%);
+  animation:noteShine 3s ease-in-out infinite;
+}
+@keyframes noteShine{0%,100%{transform:translateX(-100%);}50%{transform:translateX(200%);}}
 
-/* Slide 4 — FD card visual */
-.fd-card-mini{
-  width:110px;height:68px;border-radius:10px;
-  background:linear-gradient(135deg,#1e0a60,#3b1fa0);
-  border:1px solid rgba(160,100,255,0.3);
-  padding:10px 12px;
-  display:flex;flex-direction:column;justify-content:space-between;
-  box-shadow:0 12px 32px rgba(0,0,0,0.5);
-}
-.fd-card-chip{width:24px;height:17px;background:linear-gradient(135deg,#fcd34d,#f59e0b);border-radius:3px;}
-.fd-card-num{font-size:8.5px;font-weight:700;color:rgba(255,255,255,0.6);letter-spacing:1.5px;}
-.fd-card-badge{
-  margin-top:10px;
-  background:rgba(160,100,255,0.15);border:1px solid rgba(160,100,255,0.3);
-  border-radius:6px;padding:5px 8px;text-align:center;
-  font-size:9.5px;font-weight:700;color:#c4b5fd;
-}
-
-/* progress bar */
-.promo-progress{
-  position:absolute;bottom:0;left:0;right:0;height:3px;
-  background:rgba(255,255,255,0.08);z-index:5;
-}
-.promo-progress-bar{
-  height:100%;background:linear-gradient(90deg,rgba(255,255,255,0.5),rgba(255,255,255,0.9));
-  border-radius:0;
-  transition:none;
-}
-
-/* dots */
-.promo-dots{
-  display:flex;justify-content:center;gap:7px;
-  padding:14px 0 6px;
-  position:relative;z-index:3;
-}
-.promo-dot{
-  width:6px;height:6px;border-radius:50%;
-  background:rgba(255,255,255,0.2);
-  cursor:pointer;transition:all 0.25s;border:none;padding:0;
-}
-.promo-dot.active{
-  width:22px;border-radius:3px;background:white;
-}
-
-/* nav arrows */
-.promo-nav{
-  position:absolute;top:50%;transform:translateY(-50%);
-  width:32px;height:32px;border-radius:50%;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.14);
-  backdrop-filter:blur(10px);
+/* Coin stack below notes */
+.coin-row{display:flex;gap:5px;justify-content:center;margin-top:12px;}
+.coin{
+  width:26px;height:26px;border-radius:50%;
+  background:linear-gradient(135deg,#fcd34d,#f59e0b);
+  border:2px solid rgba(255,255,255,0.2);
+  box-shadow:0 3px 10px rgba(0,0,0,0.4);
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;z-index:10;transition:all 0.18s;color:rgba(255,255,255,0.7);
-  font-size:16px;line-height:1;
+  font-size:9px;font-weight:800;color:rgba(100,60,0,0.8);
+  animation:coinBob 2.5s ease-in-out infinite;
 }
-.promo-nav:hover{background:rgba(255,255,255,0.16);color:white;}
-.promo-prev{left:-16px;}
-.promo-next{right:-16px;}
+.coin:nth-child(2){animation-delay:0.3s;}
+.coin:nth-child(3){animation-delay:0.6s;}
+@keyframes coinBob{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+/* ── SLIDE 2: Credit Score Gauge ── */
+.score-scene{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.gauge-wrap{position:relative;width:130px;height:130px;}
+.gauge-wrap svg{width:130px;height:130px;}
+.gauge-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.gauge-num{font-size:28px;font-weight:800;color:#6ee7b7;line-height:1;animation:scoreCount 2s ease-out forwards;}
+.gauge-sub{font-size:9px;color:rgba(255,255,255,0.4);margin-top:3px;text-transform:uppercase;letter-spacing:0.1em;}
+@keyframes scoreCount{from{opacity:0.3;}to{opacity:1;}}
+/* Arc segments */
+.arc-bg{fill:none;stroke:rgba(255,255,255,0.06);stroke-width:10;}
+.arc-red{fill:none;stroke:#ef4444;stroke-width:10;stroke-linecap:round;}
+.arc-yellow{fill:none;stroke:#f59e0b;stroke-width:10;stroke-linecap:round;}
+.arc-green{fill:none;stroke:#34d399;stroke-width:10;stroke-linecap:round;}
+.arc-needle{fill:none;stroke:white;stroke-width:3;stroke-linecap:round;animation:needleSpin 2s ease-out forwards;}
+@keyframes needleSpin{from{stroke-dashoffset:100;}to{stroke-dashoffset:0;}}
+
+.score-bands{display:flex;gap:5px;margin-top:4px;}
+.score-band{height:5px;border-radius:3px;flex:1;}
+.score-band-labels{display:flex;gap:5px;}
+.sbl{font-size:9px;color:rgba(255,255,255,0.35);flex:1;text-align:center;}
+
+/* Level badges */
+.score-rating{
+  background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.3);
+  padding:5px 14px;border-radius:100px;
+  font-size:11px;font-weight:700;color:#6ee7b7;letter-spacing:0.08em;
+  animation:ratingPop 0.5s ease-out 1.5s both;
+}
+@keyframes ratingPop{from{transform:scale(0.8);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+/* ── SLIDE 3: Cashback Visual ── */
+.cashback-scene{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.cashback-main{
+  position:relative;
+  width:120px;height:120px;
+}
+.cb-outer-ring{
+  position:absolute;inset:0;border-radius:50%;
+  border:2px dashed rgba(255,150,0,0.25);
+  animation:spinSlow 14s linear infinite;
+}
+.cb-mid-ring{
+  position:absolute;inset:10px;border-radius:50%;
+  border:1.5px solid rgba(255,150,0,0.15);
+  animation:spinSlow 10s linear infinite reverse;
+}
+.cb-inner{
+  position:absolute;inset:18px;border-radius:50%;
+  background:rgba(255,255,255,0.06);
+  border:1.5px solid rgba(255,150,0,0.3);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.cb-pct{font-size:28px;font-weight:800;color:#fdba74;line-height:1;}
+.cb-lbl{font-size:8px;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.12em;}
+@keyframes spinSlow{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+/* Orbiting coin */
+.cb-orbit{position:absolute;inset:0;animation:orbitSpin 4s linear infinite;}
+@keyframes orbitSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.cb-orbit-coin{
+  position:absolute;top:-8px;left:50%;
+  transform:translateX(-50%);
+  width:20px;height:20px;border-radius:50%;
+  background:linear-gradient(135deg,#fcd34d,#f59e0b);
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
+  display:flex;align-items:center;justify-content:center;
+  font-size:8px;font-weight:800;color:rgba(100,60,0,0.9);
+  /* counter-rotate to keep text upright */
+  animation:counterSpin 4s linear infinite;
+}
+@keyframes counterSpin{from{transform:translateX(-50%) rotate(0deg);}to{transform:translateX(-50%) rotate(-360deg);}}
+
+/* Card chips strip */
+.card-chips{display:flex;gap:5px;}
+.card-chip-mini{
+  width:34px;height:22px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:9px;font-weight:700;
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
+  animation:chipFloat 2.5s ease-in-out infinite;
+}
+.card-chip-mini:nth-child(2){animation-delay:0.4s;}
+.card-chip-mini:nth-child(3){animation-delay:0.8s;}
+@keyframes chipFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+
+/* ── SLIDE 4: FD Card Scene ── */
+.fd-scene{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.fd-card{
+  width:134px;height:84px;border-radius:12px;
+  background:linear-gradient(135deg,#1e0a60,#3b1fa0);
+  border:1px solid rgba(160,100,255,0.35);
+  padding:13px 14px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 16px 40px rgba(0,0,0,0.6);
+  position:relative;overflow:hidden;
+  animation:cardTilt 4s ease-in-out infinite;
+}
+@keyframes cardTilt{0%,100%{transform:perspective(400px) rotateY(0deg) rotateX(0deg);}25%{transform:perspective(400px) rotateY(4deg) rotateX(-2deg);}75%{transform:perspective(400px) rotateY(-4deg) rotateX(2deg);}}
+.fd-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,0.08) 0%,transparent 50%);
+  animation:cardSheen 3s ease-in-out infinite;
+}
+@keyframes cardSheen{0%,100%{opacity:0.5;}50%{opacity:1;}}
+.fd-chip{width:26px;height:19px;background:linear-gradient(135deg,#fcd34d,#f59e0b);border-radius:3px;}
+.fd-card-row{display:flex;justify-content:space-between;align-items:flex-end;}
+.fd-num{font-size:8px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:1.5px;}
+.fd-logo{font-size:9px;font-weight:800;color:rgba(255,255,255,0.4);}
+/* Hologram patch */
+.fd-holo{
+  position:absolute;right:12px;top:12px;
+  width:22px;height:22px;border-radius:50%;
+  background:conic-gradient(from 0deg,#818cf8,#c4b5fd,#f0abfc,#818cf8);
+  opacity:0.7;
+  animation:holoSpin 3s linear infinite;
+}
+@keyframes holoSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+.fd-badge{
+  background:rgba(167,139,250,0.15);border:1px solid rgba(167,139,250,0.3);
+  border-radius:8px;padding:6px 10px;text-align:center;
+  font-size:10px;font-weight:700;color:#c4b5fd;
+  animation:badgePulse 2s ease-in-out infinite;
+}
+@keyframes badgePulse{0%,100%{box-shadow:0 0 0 0 rgba(167,139,250,0);}50%{box-shadow:0 0 0 4px rgba(167,139,250,0.15);}}
+
+/* Approval tick */
+.fd-tick{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#7c3aed,#8b5cf6);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+  box-shadow:0 4px 14px rgba(124,58,237,0.5);
+  animation:tickPop 1s ease-out 0.5s both;
+}
+@keyframes tickPop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+
+/* ── Progress bar ── */
+.promo-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:5;}
+.promo-progress-bar{height:100%;background:linear-gradient(90deg,rgba(255,255,255,0.4),rgba(255,255,255,0.9));transition:none;}
+
+/* ── Dots ── */
+.promo-dots{display:flex;justify-content:center;gap:7px;padding:14px 0 6px;position:relative;z-index:3;}
+.promo-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.2);cursor:pointer;transition:all 0.25s;border:none;padding:0;}
+.promo-dot.active{width:22px;border-radius:3px;background:white;}
+
+/* ── Nav arrows ── */
+.promo-nav{
+  position:absolute;top:50%;transform:translateY(-60%);
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(12px);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:10;transition:all 0.2s;color:rgba(255,255,255,0.8);
+  font-size:18px;line-height:1;
+}
+.promo-nav:hover{background:rgba(255,255,255,0.2);color:white;transform:translateY(-60%) scale(1.1);}
+.promo-prev{left:-18px;}
+.promo-next{right:-18px;}
+
+/* Slide count badge */
+.slide-counter{
+  position:absolute;top:12px;right:12px;z-index:10;
+  background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:100px;padding:3px 10px;
+  font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);
+}
 
 /* ── SEARCH PANEL ── */
-.search-panel-wrap{
-  position:relative;z-index:20;width:100%;
-  display:flex;justify-content:center;
-  margin-top:-52px;padding:0 44px;
-}
-.search-panel{
-  width:100%;max-width:1120px;
-  background:white;border-radius:22px;
-  box-shadow:0 24px 64px rgba(4,13,30,0.22);
-  overflow:hidden;border:1px solid rgba(0,0,0,0.06);
-}
-.search-tabs{
-  display:flex;border-bottom:1px solid var(--border);
-  overflow-x:auto;padding:0 10px;background:#f8faff;
-  scrollbar-width:none;
-}
+.search-panel-wrap{position:relative;z-index:20;width:100%;display:flex;justify-content:center;margin-top:-52px;padding:0 44px;}
+.search-panel{width:100%;max-width:1120px;background:white;border-radius:22px;box-shadow:0 24px 64px rgba(4,13,30,0.22);overflow:hidden;border:1px solid rgba(0,0,0,0.06);}
+.search-tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;padding:0 10px;background:#f8faff;scrollbar-width:none;}
 .search-tabs::-webkit-scrollbar{display:none;}
-.s-tab{
-  display:flex;flex-direction:column;align-items:center;gap:5px;
-  padding:16px 20px;cursor:pointer;border-bottom:3px solid transparent;
-  font-size:12.5px;font-weight:600;color:var(--muted);
-  transition:all 0.2s;white-space:nowrap;
-}
+.s-tab{display:flex;flex-direction:column;align-items:center;gap:5px;padding:16px 20px;cursor:pointer;border-bottom:3px solid transparent;font-size:12.5px;font-weight:600;color:var(--muted);transition:all 0.2s;white-space:nowrap;}
 .s-tab:hover{color:var(--blue-bright);}
 .s-tab.active{color:var(--blue-bright);border-bottom-color:var(--accent);background:white;}
 .s-tab-icon{font-size:20px;}
 .search-body{padding:26px 30px;display:flex;gap:14px;align-items:flex-end;}
 .s-field{flex:1;display:flex;flex-direction:column;gap:6px;}
 .s-field label{font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;}
-.s-field select,.s-field input{
-  padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;
-  font-size:14px;font-family:inherit;color:var(--text);
-  background:var(--surface);transition:all 0.18s;outline:none;
-  appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;
-}
+.s-field select,.s-field input{padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);background:var(--surface);transition:all 0.18s;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;}
 .s-field select:focus,.s-field input:focus{border-color:var(--blue-bright);background:white;box-shadow:0 0 0 3px rgba(33,85,212,0.08);}
 .s-field input{background-image:none;padding-right:14px;}
-.btn-search{
-  padding:0 32px;border-radius:10px;background:var(--accent);color:white;
-  font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;
-  transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:8px;
-  height:48px;flex-shrink:0;
-}
+.btn-search{padding:0 32px;border-radius:10px;background:var(--accent);color:white;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:8px;height:48px;flex-shrink:0;}
 .btn-search:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 8px 20px rgba(249,115,22,0.38);}
 
 /* ── LOGOS STRIP ── */
-.logos-strip{
-  padding:28px 44px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);
-  display:flex;align-items:center;gap:20px;overflow:hidden;margin-top:64px;
-}
+.logos-strip{padding:28px 44px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:20px;overflow:hidden;margin-top:64px;}
 .logos-label{font-size:11.5px;font-weight:700;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;}
 .logos-divider{width:1px;height:30px;background:rgba(255,255,255,0.1);flex-shrink:0;}
 .logos-track{display:flex;gap:0;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
 .logos-inner{display:flex;gap:0;animation:scrollL 22s linear infinite;}
 @keyframes scrollL{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-.logo-chip{
-  padding:0 26px;height:38px;display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;color:rgba(255,255,255,0.3);white-space:nowrap;
-  border-right:1px solid rgba(255,255,255,0.07);transition:color 0.2s;
-}
+.logo-chip{padding:0 26px;height:38px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:rgba(255,255,255,0.3);white-space:nowrap;border-right:1px solid rgba(255,255,255,0.07);transition:color 0.2s;}
 .logo-chip:hover{color:rgba(255,255,255,0.7);}
 
 /* ── SECTIONS ── */
@@ -478,11 +551,7 @@ nav{
 /* ── SERVICES ── */
 .services-section{background:var(--surface);}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.svc-card{
-  background:white;border-radius:20px;overflow:hidden;
-  border:1px solid var(--border);cursor:pointer;
-  transition:transform 0.28s,box-shadow 0.28s;position:relative;
-}
+.svc-card{background:white;border-radius:20px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:transform 0.28s,box-shadow 0.28s;position:relative;}
 .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
 .svc-card-hero{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .svc-card-hero.c1{background:linear-gradient(140deg,var(--navy) 0%,#1540a0 100%);}
@@ -490,26 +559,13 @@ nav{
 .svc-card-hero.c3{background:linear-gradient(140deg,#022c1c 0%,#059669 100%);}
 .svc-card-bg-icon{position:absolute;font-size:100px;opacity:0.07;right:-15px;bottom:-20px;filter:blur(1px);}
 .svc-card-main-icon{font-size:60px;position:relative;z-index:2;filter:drop-shadow(0 6px 20px rgba(0,0,0,0.3));}
-.svc-badge{
-  position:absolute;top:14px;left:14px;
-  background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,0.18);
-  color:white;padding:4px 11px;border-radius:100px;
-  font-size:10.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;
-}
+.svc-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.18);color:white;padding:4px 11px;border-radius:100px;font-size:10.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;}
 .svc-card-body{padding:22px 24px 24px;}
 .svc-card-tag{font-size:11px;font-weight:700;color:var(--blue-bright);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
 .svc-card-title{font-size:17px;font-weight:800;margin-bottom:14px;color:var(--navy);line-height:1.3;}
 .svc-card-feats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;}
-.svc-feat{
-  display:flex;align-items:center;gap:5px;
-  background:var(--surface);border:1px solid var(--border);
-  padding:4px 11px;border-radius:100px;font-size:11.5px;color:var(--muted);font-weight:500;
-}
-.svc-cta{
-  width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;
-  border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;color:white;
-}
+.svc-feat{display:flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border);padding:4px 11px;border-radius:100px;font-size:11.5px;color:var(--muted);font-weight:500;}
+.svc-cta{width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;color:white;}
 .svc-cta.c1{background:var(--navy);}
 .svc-cta.c1:hover{background:var(--blue);}
 .svc-cta.c2{background:var(--accent);}
@@ -517,31 +573,18 @@ nav{
 .svc-cta.c3{background:#059669;}
 .svc-cta.c3:hover{background:#047857;}
 
-/* ── STATS STRIP ── */
-.stats-strip{
-  background:var(--navy);padding:52px 44px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  position:relative;overflow:hidden;
-}
-.stats-strip::before{
-  content:'';position:absolute;inset:0;
-  background-image:linear-gradient(rgba(33,85,212,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.06) 1px,transparent 1px);
-  background-size:40px 40px;
-}
+/* ── STATS ── */
+.stats-strip{background:var(--navy);padding:52px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;overflow:hidden;}
+.stats-strip::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(33,85,212,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.06) 1px,transparent 1px);background-size:40px 40px;}
 .stat-box{text-align:center;padding:16px 20px;border-right:1px solid rgba(255,255,255,0.08);color:white;position:relative;z-index:1;}
 .stat-box:last-child{border-right:none;}
 .stat-num{font-size:42px;font-weight:800;color:#93c5fd;line-height:1;letter-spacing:-1px;}
 .stat-lbl{font-size:14px;color:rgba(255,255,255,0.45);margin-top:7px;font-weight:500;}
-.stat-box:hover .stat-num{color:#bfdbfe;transition:color 0.2s;}
 
 /* ── PRODUCTS ── */
 .products-section{background:white;}
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-.prod-card{
-  border:1.5px solid var(--border);border-radius:16px;padding:24px;
-  cursor:pointer;transition:all 0.22s;background:white;
-  display:flex;flex-direction:column;gap:10px;
-}
+.prod-card{border:1.5px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all 0.22s;background:white;display:flex;flex-direction:column;gap:10px;}
 .prod-card:hover{border-color:var(--blue-bright);box-shadow:0 6px 28px rgba(33,85,212,0.1);transform:translateY(-3px);}
 .prod-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;}
 .prod-icon.blue{background:#eff6ff;}
@@ -561,31 +604,13 @@ nav{
 .how-section{background:var(--navy);position:relative;overflow:hidden;}
 .how-section .sec-title{color:white;}
 .how-section .sec-sub{color:rgba(255,255,255,0.45);}
-.how-section::before{
-  content:'';position:absolute;inset:0;
-  background-image:linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);
-  background-size:44px 44px;
-}
+.how-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(33,85,212,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.07) 1px,transparent 1px);background-size:44px 44px;}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;}
-.how-connector{
-  position:absolute;top:54px;left:calc(33.33% + 10px);
-  width:calc(33.33% - 20px);height:2px;
-  background:linear-gradient(90deg,rgba(33,85,212,0.6),rgba(249,115,22,0.6));
-  z-index:0;border-radius:2px;
-}
+.how-connector{position:absolute;top:54px;left:calc(33.33% + 10px);width:calc(33.33% - 20px);height:2px;background:linear-gradient(90deg,rgba(33,85,212,0.6),rgba(249,115,22,0.6));z-index:0;border-radius:2px;}
 .how-connector2{left:calc(66.66% + 10px);}
-.step-card{
-  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
-  border-radius:18px;padding:32px 28px;position:relative;z-index:1;transition:all 0.25s;
-}
+.step-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:32px 28px;position:relative;z-index:1;transition:all 0.25s;}
 .step-card:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.14);}
-.step-badge{
-  width:42px;height:42px;border-radius:50%;
-  background:linear-gradient(135deg,var(--blue),var(--blue-bright));
-  color:white;font-weight:800;font-size:17px;
-  display:flex;align-items:center;justify-content:center;margin-bottom:20px;
-  box-shadow:0 4px 16px rgba(33,85,212,0.35);
-}
+.step-badge{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-bright));color:white;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 4px 16px rgba(33,85,212,0.35);}
 .step-icon{font-size:30px;margin-bottom:12px;}
 .step-title{font-weight:800;font-size:17px;color:white;margin-bottom:9px;}
 .step-desc{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;}
@@ -593,11 +618,7 @@ nav{
 /* ── TAX ── */
 .tax-section{background:var(--surface);}
 .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
-.tax-card{
-  border-radius:18px;padding:34px 32px;
-  display:flex;align-items:flex-start;gap:22px;
-  cursor:pointer;transition:all 0.22s;border:1.5px solid var(--border);background:white;
-}
+.tax-card{border-radius:18px;padding:34px 32px;display:flex;align-items:flex-start;gap:22px;cursor:pointer;transition:all 0.22s;border:1.5px solid var(--border);background:white;}
 .tax-card:hover{border-color:var(--blue-bright);box-shadow:var(--shadow);transform:translateY(-3px);}
 .tax-icon{width:58px;height:58px;border-radius:16px;font-size:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .tax-icon.blue{background:#eff6ff;}
@@ -616,21 +637,13 @@ nav{
 .testi-track::after{right:0;background:linear-gradient(to left,var(--navy),transparent);}
 .testi-inner{display:flex;gap:20px;animation:scrollL 34s linear infinite;}
 .testi-inner:hover{animation-play-state:paused;}
-.testi-card{
-  min-width:300px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;padding:26px;transition:all 0.2s;
-}
+.testi-card{min-width:300px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:26px;transition:all 0.2s;}
 .testi-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.14);}
 .testi-stars{color:var(--gold);font-size:13px;margin-bottom:10px;}
 .testi-title{font-weight:700;font-size:15px;color:white;margin-bottom:9px;}
 .testi-text{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:18px;font-style:italic;}
 .testi-author{display:flex;align-items:center;gap:11px;}
-.testi-avatar{
-  width:40px;height:40px;border-radius:50%;
-  background:linear-gradient(135deg,var(--blue),var(--blue-bright));
-  display:flex;align-items:center;justify-content:center;
-  color:white;font-weight:700;font-size:13px;flex-shrink:0;
-}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-bright));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:13px;flex-shrink:0;}
 .testi-name{font-weight:700;font-size:13.5px;color:white;}
 .testi-role{font-size:11.5px;color:rgba(255,255,255,0.35);}
 
@@ -638,22 +651,14 @@ nav{
 .partners-section{background:var(--surface);padding:60px 44px;}
 .prt-track{overflow:hidden;margin-top:34px;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
 .prt-inner{display:flex;gap:14px;animation:scrollL 20s linear infinite;align-items:center;}
-.prt-chip{
-  min-width:160px;height:56px;background:white;border-radius:12px;
-  border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;color:#8097b8;padding:0 24px;white-space:nowrap;transition:all 0.2s;
-}
+.prt-chip{min-width:160px;height:56px;background:white;border-radius:12px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#8097b8;padding:0 24px;white-space:nowrap;transition:all 0.2s;}
 .prt-chip:hover{border-color:var(--blue-bright);color:var(--blue-bright);}
 
 /* ── HELP ── */
 .help-section{background:var(--navy);padding:60px 44px;}
 .help-section .sec-title{color:white;}
 .help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;}
-.help-card{
-  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
-  border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;
-  cursor:pointer;transition:all 0.22s;
-}
+.help-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:all 0.22s;}
 .help-card:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16);transform:translateY(-2px);}
 .help-icon{width:50px;height:50px;border-radius:13px;font-size:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .help-icon.bl{background:rgba(33,85,212,0.2);}
@@ -665,32 +670,13 @@ nav{
 
 /* ── CTA BANNER ── */
 .cta-wrap{padding:0 44px 80px;background:var(--surface);}
-.cta-banner{
-  border-radius:24px;padding:56px 64px;background:var(--navy);
-  border:1px solid rgba(255,255,255,0.06);
-  display:flex;align-items:center;justify-content:space-between;
-  overflow:hidden;position:relative;
-}
-.cta-banner::before{
-  content:'';position:absolute;inset:0;
-  background-image:linear-gradient(rgba(33,85,212,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.08) 1px,transparent 1px);
-  background-size:40px 40px;
-}
-.cta-banner::after{
-  content:'';position:absolute;
-  width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 65%);
-  right:-100px;top:50%;transform:translateY(-50%);
-}
+.cta-banner{border-radius:24px;padding:56px 64px;background:var(--navy);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;overflow:hidden;position:relative;}
+.cta-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(33,85,212,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(33,85,212,0.08) 1px,transparent 1px);background-size:40px 40px;}
+.cta-banner::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(33,85,212,0.22) 0%,transparent 65%);right:-100px;top:50%;transform:translateY(-50%);}
 .cta-text{position:relative;z-index:1;}
 .cta-banner h2{font-size:30px;font-weight:800;color:white;margin-bottom:9px;letter-spacing:-0.5px;}
 .cta-banner p{font-size:15.5px;color:rgba(255,255,255,0.5);}
-.btn-cta-final{
-  position:relative;z-index:1;
-  padding:16px 40px;border-radius:12px;background:var(--accent);color:white;
-  font-size:15.5px;font-weight:800;border:none;cursor:pointer;font-family:inherit;
-  transition:all 0.22s;white-space:nowrap;flex-shrink:0;
-}
+.btn-cta-final{position:relative;z-index:1;padding:16px 40px;border-radius:12px;background:var(--accent);color:white;font-size:15.5px;font-weight:800;border:none;cursor:pointer;font-family:inherit;transition:all 0.22s;white-space:nowrap;flex-shrink:0;}
 .btn-cta-final:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(249,115,22,0.42);}
 
 /* ── FOOTER ── */
@@ -794,20 +780,38 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
       </div>
     </div>
 
-    <!-- RIGHT — PREMIUM BANNER CAROUSEL -->
+    <!-- RIGHT — PREMIUM CAROUSEL -->
     <div class="hero-right">
-      <div class="promo-carousel-wrap">
+      <!-- Ambient orbs -->
+      <div class="carousel-orb carousel-orb-1"></div>
+      <div class="carousel-orb carousel-orb-2"></div>
+      <div class="carousel-orb carousel-orb-3"></div>
 
-        <!-- prev/next arrows -->
+      <!-- Floating particles -->
+      <div class="carousel-particle" style="width:5px;height:5px;background:#60a5fa;top:8%;left:8%;animation-delay:0s;"></div>
+      <div class="carousel-particle" style="width:4px;height:4px;background:#f97316;top:20%;right:6%;animation-delay:0.8s;"></div>
+      <div class="carousel-particle" style="width:6px;height:6px;background:#a78bfa;bottom:18%;right:4%;animation-delay:1.4s;"></div>
+      <div class="carousel-particle" style="width:3px;height:3px;background:#34d399;bottom:28%;left:5%;animation-delay:2s;"></div>
+      <div class="carousel-particle" style="width:5px;height:5px;background:#fbbf24;top:60%;left:2%;animation-delay:0.5s;"></div>
+
+      <div class="promo-carousel-wrap">
+        <!-- Pulsing rings -->
+        <div class="carousel-ring"></div>
+        <div class="carousel-ring carousel-ring-2"></div>
+
+        <!-- arrows -->
         <button class="promo-nav promo-prev" id="promoPrev">&#8249;</button>
         <button class="promo-nav promo-next" id="promoNext">&#8250;</button>
 
         <div class="promo-carousel">
+          <!-- Slide counter -->
+          <div class="slide-counter" id="slideCounter">1 / 4</div>
+
           <div class="promo-slides" id="promoSlides">
 
-            <!-- SLIDE 1: Personal Loan -->
+            <!-- ═══ SLIDE 1: Personal Loan ═══ -->
             <div class="promo-slide ps-1">
-              <div class="ps-content">
+              <div class="ps-left">
                 <div class="ps-tag ps-tag-blue"><span class="ps-tag-dot b"></span>Need urgent funds?</div>
                 <div class="ps-label">Get Personal Loan up to</div>
                 <div class="ps-amount blue">₹50,00,000</div>
@@ -821,18 +825,38 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
-              <div class="ps-visual">
-                <div class="money-stack">
-                  <div class="money-note mn-1">₹ 500</div>
-                  <div class="money-note mn-2">₹ 500</div>
-                  <div class="money-note mn-3">₹ 500</div>
+              <div class="ps-right">
+                <div class="money-scene">
+                  <div class="money-note">
+                    <span class="mn-rupee">₹</span>
+                    <span class="mn-val">500<br>NOTE</span>
+                    <div class="mn-stripe"></div>
+                    <div class="note-shine"></div>
+                  </div>
+                  <div class="money-note">
+                    <span class="mn-rupee">₹</span>
+                    <span class="mn-val">500<br>NOTE</span>
+                    <div class="mn-stripe"></div>
+                    <div class="note-shine"></div>
+                  </div>
+                  <div class="money-note">
+                    <span class="mn-rupee">₹</span>
+                    <span class="mn-val">500<br>NOTE</span>
+                    <div class="mn-stripe"></div>
+                    <div class="note-shine"></div>
+                  </div>
+                  <div class="coin-row">
+                    <div class="coin">₹</div>
+                    <div class="coin">₹</div>
+                    <div class="coin">₹</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- SLIDE 2: Free Credit Score -->
+            <!-- ═══ SLIDE 2: Credit Score ═══ -->
             <div class="promo-slide ps-2">
-              <div class="ps-content">
+              <div class="ps-left">
                 <div class="ps-tag ps-tag-green"><span class="ps-tag-dot g"></span>Free credit check</div>
                 <div class="ps-label">Get Credit Score &amp; Report worth</div>
                 <div class="ps-amount green">₹1,200 FREE</div>
@@ -846,37 +870,56 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
-              <div class="ps-visual">
-                <div class="score-ring-wrap">
-                  <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
-                    <circle cx="50" cy="50" r="40" fill="none" stroke="url(#scoreGrad)" stroke-width="8"
-                      stroke-dasharray="188" stroke-dashoffset="47" stroke-linecap="round"
-                      transform="rotate(-90 50 50)"/>
-                    <defs>
-                      <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#34d399"/>
-                        <stop offset="100%" stop-color="#6ee7b7"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div class="score-label">
-                    <div class="score-num">800+</div>
-                    <div class="score-sub">Score</div>
+              <div class="ps-right">
+                <div class="score-scene">
+                  <div class="gauge-wrap">
+                    <svg viewBox="0 0 130 130">
+                      <defs>
+                        <linearGradient id="gGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stop-color="#34d399"/>
+                          <stop offset="100%" stop-color="#6ee7b7"/>
+                        </linearGradient>
+                      </defs>
+                      <!-- BG arc -->
+                      <circle class="arc-bg" cx="65" cy="65" r="50" stroke-dasharray="220 314" stroke-dashoffset="-47" transform="rotate(-220 65 65)"/>
+                      <!-- Red zone -->
+                      <circle cx="65" cy="65" r="50" fill="none" stroke="#ef4444" stroke-width="10" stroke-linecap="round"
+                        stroke-dasharray="60 314" stroke-dashoffset="-47" transform="rotate(-220 65 65)" opacity="0.7"/>
+                      <!-- Yellow zone -->
+                      <circle cx="65" cy="65" r="50" fill="none" stroke="#f59e0b" stroke-width="10" stroke-linecap="round"
+                        stroke-dasharray="70 314" stroke-dashoffset="-107" transform="rotate(-220 65 65)" opacity="0.7"/>
+                      <!-- Green zone -->
+                      <circle cx="65" cy="65" r="50" fill="none" stroke="url(#gGreen)" stroke-width="10" stroke-linecap="round"
+                        stroke-dasharray="90 314" stroke-dashoffset="-177" transform="rotate(-220 65 65)" opacity="0.9"/>
+                      <!-- Needle -->
+                      <line x1="65" y1="65" x2="65" y2="22" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                        transform-origin="65 65" transform="rotate(65 65 65)" opacity="0.9"/>
+                      <circle cx="65" cy="65" r="5" fill="white" opacity="0.9"/>
+                    </svg>
+                    <div class="gauge-label">
+                      <div class="gauge-num">800+</div>
+                      <div class="gauge-sub">Score</div>
+                    </div>
                   </div>
+                  <div class="score-bands">
+                    <div class="score-band" style="background:#ef4444;opacity:0.7;"></div>
+                    <div class="score-band" style="background:#f59e0b;opacity:0.7;"></div>
+                    <div class="score-band" style="background:#34d399;opacity:0.9;"></div>
+                  </div>
+                  <div class="score-rating">EXCELLENT</div>
                 </div>
               </div>
             </div>
 
-            <!-- SLIDE 3: Cashback on Credit Cards -->
+            <!-- ═══ SLIDE 3: Cashback ═══ -->
             <div class="promo-slide ps-3">
-              <div class="ps-content">
+              <div class="ps-left">
                 <div class="ps-tag ps-tag-orange"><span class="ps-tag-dot o"></span>Shop smart, save more</div>
                 <div class="ps-label">Earn Cashback on</div>
-                <div class="ps-amount orange" style="font-size:26px;">Credit Card Spends</div>
+                <div class="ps-amount orange" style="font-size:26px;margin-bottom:10px;">Credit Card Spends</div>
                 <ul class="ps-bullets">
                   <li><span class="ps-bullet-dot b-orange"></span>Up to 5% cashback on all spends</li>
-                  <li><span class="ps-bullet-dot b-orange"></span>Top cards from HDFC, Axis, ICICI</li>
+                  <li><span class="ps-bullet-dot b-orange"></span>Top cards: HDFC, Axis, ICICI</li>
                   <li><span class="ps-bullet-dot b-orange"></span>Lifetime free options available</li>
                 </ul>
                 <button class="ps-btn ps-btn-orange">
@@ -884,17 +927,31 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
-              <div class="ps-visual">
-                <div class="cashback-circle">
-                  <div class="cb-pct">5%</div>
-                  <div class="cb-lbl">CASH<br>BACK</div>
+              <div class="ps-right">
+                <div class="cashback-scene">
+                  <div class="cashback-main">
+                    <div class="cb-outer-ring"></div>
+                    <div class="cb-mid-ring"></div>
+                    <div class="cb-inner">
+                      <div class="cb-pct">5%</div>
+                      <div class="cb-lbl">CASH<br>BACK</div>
+                    </div>
+                    <div class="cb-orbit">
+                      <div class="cb-orbit-coin">₹</div>
+                    </div>
+                  </div>
+                  <div class="card-chips">
+                    <div class="card-chip-mini" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">🅷</div>
+                    <div class="card-chip-mini" style="background:linear-gradient(135deg,#b91c1c,#ef4444);">🅰</div>
+                    <div class="card-chip-mini" style="background:linear-gradient(135deg,#0f766e,#14b8a6);">🅸</div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- SLIDE 4: Credit Card Against FD -->
+            <!-- ═══ SLIDE 4: FD Card ═══ -->
             <div class="promo-slide ps-4">
-              <div class="ps-content">
+              <div class="ps-left">
                 <div class="ps-tag ps-tag-purple"><span class="ps-tag-dot p"></span>100% Approval</div>
                 <div class="ps-label">Credit Cards Against Fixed Deposit</div>
                 <div class="ps-amount purple">Zero Risk Card</div>
@@ -908,26 +965,31 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
               </div>
-              <div class="ps-visual">
-                <div>
-                  <div class="fd-card-mini">
-                    <div class="fd-card-chip"></div>
-                    <div class="fd-card-num">•••• •••• •••• 4521</div>
+              <div class="ps-right">
+                <div class="fd-scene">
+                  <div class="fd-card">
+                    <div class="fd-holo"></div>
+                    <div class="fd-chip"></div>
+                    <div class="fd-card-row">
+                      <div class="fd-num">•••• 4521</div>
+                      <div class="fd-logo">CE</div>
+                    </div>
                   </div>
-                  <div class="fd-card-badge">FD-Backed • 100% Safe</div>
+                  <div class="fd-badge">FD-Backed • 100% Safe</div>
+                  <div class="fd-tick">✓</div>
                 </div>
               </div>
             </div>
 
           </div><!-- /promo-slides -->
 
-          <!-- progress bar -->
+          <!-- Progress bar -->
           <div class="promo-progress">
             <div class="promo-progress-bar" id="promoBar"></div>
           </div>
         </div><!-- /promo-carousel -->
 
-        <!-- dots -->
+        <!-- Dots -->
         <div class="promo-dots" id="promoDots">
           <button class="promo-dot active"></button>
           <button class="promo-dot"></button>
@@ -941,7 +1003,7 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   </div>
 </div>
 
-<!-- FLOATING SEARCH PANEL -->
+<!-- SEARCH PANEL -->
 <div class="search-panel-wrap">
   <div class="search-panel">
     <div class="search-tabs" id="sTabs">
@@ -994,53 +1056,29 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-sub">Everything you need to manage your financial life in one powerful platform</div>
   <div class="services-grid stagger">
     <div class="svc-card">
-      <div class="svc-card-hero c1">
-        <div class="svc-card-bg-icon">💰</div>
-        <div class="svc-card-main-icon">💸</div>
-        <div class="svc-badge">Most Popular</div>
-      </div>
+      <div class="svc-card-hero c1"><div class="svc-card-bg-icon">💰</div><div class="svc-card-main-icon">💸</div><div class="svc-badge">Most Popular</div></div>
       <div class="svc-card-body">
         <div class="svc-card-tag">Personal Loans</div>
         <div class="svc-card-title">Achieve your goals with easy personal loans</div>
-        <div class="svc-card-feats">
-          <div class="svc-feat">✅ Low Interest Rates</div>
-          <div class="svc-feat">⚡ Instant Disbursal</div>
-          <div class="svc-feat">📋 Min Documents</div>
-        </div>
+        <div class="svc-card-feats"><div class="svc-feat">✅ Low Interest Rates</div><div class="svc-feat">⚡ Instant Disbursal</div><div class="svc-feat">📋 Min Documents</div></div>
         <button class="svc-cta c1">Apply Now</button>
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-hero c2">
-        <div class="svc-card-bg-icon">📈</div>
-        <div class="svc-card-main-icon">🚀</div>
-        <div class="svc-badge">Up to ₹50L</div>
-      </div>
+      <div class="svc-card-hero c2"><div class="svc-card-bg-icon">📈</div><div class="svc-card-main-icon">🚀</div><div class="svc-badge">Up to ₹50L</div></div>
       <div class="svc-card-body">
         <div class="svc-card-tag">Business Loans</div>
         <div class="svc-card-title">Grow your business with tailored funding solutions</div>
-        <div class="svc-card-feats">
-          <div class="svc-feat">💼 Up to ₹50L</div>
-          <div class="svc-feat">📊 Flexible Terms</div>
-          <div class="svc-feat">🤝 Expert Help</div>
-        </div>
+        <div class="svc-card-feats"><div class="svc-feat">💼 Up to ₹50L</div><div class="svc-feat">📊 Flexible Terms</div><div class="svc-feat">🤝 Expert Help</div></div>
         <button class="svc-cta c2">Apply Now</button>
       </div>
     </div>
     <div class="svc-card">
-      <div class="svc-card-hero c3">
-        <div class="svc-card-bg-icon">🏠</div>
-        <div class="svc-card-main-icon">🏡</div>
-        <div class="svc-badge">Best Rates</div>
-      </div>
+      <div class="svc-card-hero c3"><div class="svc-card-bg-icon">🏠</div><div class="svc-card-main-icon">🏡</div><div class="svc-badge">Best Rates</div></div>
       <div class="svc-card-body">
         <div class="svc-card-tag">Home Loans</div>
         <div class="svc-card-title">Turn your dream home into reality with best rates</div>
-        <div class="svc-card-feats">
-          <div class="svc-feat">🎯 Best Rates</div>
-          <div class="svc-feat">🤖 AI-Driven</div>
-          <div class="svc-feat">🏆 Top Lenders</div>
-        </div>
+        <div class="svc-card-feats"><div class="svc-feat">🎯 Best Rates</div><div class="svc-feat">🤖 AI-Driven</div><div class="svc-feat">🏆 Top Lenders</div></div>
         <button class="svc-cta c3">Apply Now</button>
       </div>
     </div>
@@ -1061,48 +1099,12 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-title">Loans & <em>Credit Cards</em></div>
   <div class="sec-sub">Find the perfect financial product tailored to your unique needs</div>
   <div class="products-grid stagger">
-    <div class="prod-card">
-      <div class="prod-icon blue">👤</div>
-      <div class="prod-title">Personal Loan</div>
-      <div class="prod-desc">Achieve your goals with easy personal loans. Quick approval, low rates, minimal paperwork.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">10.5% p.a.</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
-    <div class="prod-card">
-      <div class="prod-icon orange">🏢</div>
-      <div class="prod-title">Business Loan</div>
-      <div class="prod-desc">Grow your business with tailored loans designed for entrepreneurs and SMEs.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">12% p.a.</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
-    <div class="prod-card">
-      <div class="prod-icon green">🏠</div>
-      <div class="prod-title">Home Loan</div>
-      <div class="prod-desc">Turn your dream home into reality with our flexible AI-matched home loans.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">8.4% p.a.</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
-    <div class="prod-card">
-      <div class="prod-icon purple">🌱</div>
-      <div class="prod-title">Micro Loan</div>
-      <div class="prod-desc">Kickstart your project with quick microloans. Small ticket, big dreams, fast disbursal.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">14% p.a.</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
-    <div class="prod-card">
-      <div class="prod-icon teal">💳</div>
-      <div class="prod-title">Credit Card</div>
-      <div class="prod-desc">Enjoy perks and rewards with our smart AI-matched credit cards from top issuers.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Up to</span><span class="prod-rate-val">5% Cashback</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
-    <div class="prod-card">
-      <div class="prod-icon red">🏗️</div>
-      <div class="prod-title">Loan Against Property</div>
-      <div class="prod-desc">Unlock the value in your property with best-in-class rates and flexible repayment.</div>
-      <div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">9% p.a.</span></div>
-      <div class="prod-arrow">Apply Now →</div>
-    </div>
+    <div class="prod-card"><div class="prod-icon blue">👤</div><div class="prod-title">Personal Loan</div><div class="prod-desc">Achieve your goals with easy personal loans. Quick approval, low rates, minimal paperwork.</div><div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">10.5% p.a.</span></div><div class="prod-arrow">Apply Now →</div></div>
+    <div class="prod-card"><div class="prod-icon orange">🏢</div><div class="prod-title">Business Loan</div><div class="prod-desc">Grow your business with tailored loans designed for entrepreneurs and SMEs.</div><div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">12% p.a.</span></div><div class="prod-arrow">Apply Now →</div></div>
+    <div class="prod-card"><div class="prod-icon green">🏠</div><div class="prod-title">Home Loan</div><div class="prod-desc">Turn your dream home into reality with our flexible AI-matched home loans.</div><div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">8.4% p.a.</span></div><div class="prod-arrow">Apply Now →</div></div>
+    <div class="prod-card"><div class="prod-icon purple">🌱</div><div class="prod-title">Micro Loan</div><div class="prod-desc">Kickstart your project with quick microloans. Small ticket, big dreams, fast disbursal.</div><div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">14% p.a.</span></div><div class="prod-arrow">Apply Now →</div></div>
+    <div class="prod-card"><div class="prod-icon teal">💳</div><div class="prod-title">Credit Card</div><div class="prod-desc">Enjoy perks and rewards with our smart AI-matched credit cards from top issuers.</div><div class="prod-rate"><span class="prod-rate-lbl">Up to</span><span class="prod-rate-val">5% Cashback</span></div><div class="prod-arrow">Apply Now →</div></div>
+    <div class="prod-card"><div class="prod-icon red">🏗️</div><div class="prod-title">Loan Against Property</div><div class="prod-desc">Unlock the value in your property with best-in-class rates and flexible repayment.</div><div class="prod-rate"><span class="prod-rate-lbl">Starting from</span><span class="prod-rate-val">9% p.a.</span></div><div class="prod-arrow">Apply Now →</div></div>
   </div>
 </section>
 
@@ -1112,26 +1114,10 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-title">Apply in <em style="color:#60a5fa">3 Easy Steps</em></div>
   <div class="sec-sub">Our AI-powered process makes getting a loan faster than ever before</div>
   <div class="how-grid stagger">
-    <div class="how-connector"></div>
-    <div class="how-connector how-connector2"></div>
-    <div class="step-card">
-      <div class="step-badge">1</div>
-      <div class="step-icon">📝</div>
-      <div class="step-title">Fill Your Details</div>
-      <div class="step-desc">Share your basic info and loan requirements. Takes less than 2 minutes on any device, no uploads needed.</div>
-    </div>
-    <div class="step-card">
-      <div class="step-badge">2</div>
-      <div class="step-icon">🤖</div>
-      <div class="step-title">AI Matches Offers</div>
-      <div class="step-desc">Our smart AI scans 1000+ lenders instantly and presents the best personalized offers just for you.</div>
-    </div>
-    <div class="step-card">
-      <div class="step-badge">3</div>
-      <div class="step-icon">🏦</div>
-      <div class="step-title">Get Approved & Funded</div>
-      <div class="step-desc">Choose your offer, complete e-KYC digitally, and receive funds directly in your bank account within hours.</div>
-    </div>
+    <div class="how-connector"></div><div class="how-connector how-connector2"></div>
+    <div class="step-card"><div class="step-badge">1</div><div class="step-icon">📝</div><div class="step-title">Fill Your Details</div><div class="step-desc">Share your basic info and loan requirements. Takes less than 2 minutes on any device, no uploads needed.</div></div>
+    <div class="step-card"><div class="step-badge">2</div><div class="step-icon">🤖</div><div class="step-title">AI Matches Offers</div><div class="step-desc">Our smart AI scans 1000+ lenders instantly and presents the best personalized offers just for you.</div></div>
+    <div class="step-card"><div class="step-badge">3</div><div class="step-icon">🏦</div><div class="step-title">Get Approved & Funded</div><div class="step-desc">Choose your offer, complete e-KYC digitally, and receive funds directly in your bank account within hours.</div></div>
   </div>
 </section>
 
@@ -1141,22 +1127,8 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-title">Tax Filing <em>Made Easy</em></div>
   <div class="sec-sub">Hassle-free income tax and GST filing from the comfort of your home</div>
   <div class="tax-grid stagger">
-    <div class="tax-card">
-      <div class="tax-icon blue">📋</div>
-      <div class="tax-body">
-        <h3>Income Tax Filing</h3>
-        <p>File your ITR accurately and on time with expert CA assistance. Simple, fast, and 100% error-free with our AI-guided process for salaried and business individuals.</p>
-        <div class="tax-cta">Get Started →</div>
-      </div>
-    </div>
-    <div class="tax-card">
-      <div class="tax-icon green">🧾</div>
-      <div class="tax-body">
-        <h3>GST Filing</h3>
-        <p>Automate your GSTR filings, manage compliance, and avoid penalties with our intelligent GST management platform. Built for modern businesses.</p>
-        <div class="tax-cta">Get Started →</div>
-      </div>
-    </div>
+    <div class="tax-card"><div class="tax-icon blue">📋</div><div class="tax-body"><h3>Income Tax Filing</h3><p>File your ITR accurately and on time with expert CA assistance. Simple, fast, and 100% error-free with our AI-guided process for salaried and business individuals.</p><div class="tax-cta">Get Started →</div></div></div>
+    <div class="tax-card"><div class="tax-icon green">🧾</div><div class="tax-body"><h3>GST Filing</h3><p>Automate your GSTR filings, manage compliance, and avoid penalties with our intelligent GST management platform. Built for modern businesses.</p><div class="tax-cta">Get Started →</div></div></div>
   </div>
 </section>
 
@@ -1165,9 +1137,7 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Reviews</span></div>
   <div class="sec-title">Hear from Our <em style="color:#60a5fa">Clients</em></div>
   <div class="sec-sub" style="margin-bottom:32px">10,000+ happy customers trust CreditExchange with their finances</div>
-  <div class="testi-track">
-    <div class="testi-inner" id="testiInner"></div>
-  </div>
+  <div class="testi-track"><div class="testi-inner" id="testiInner"></div></div>
 </section>
 
 <!-- PARTNERS -->
@@ -1175,9 +1145,7 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Our Network</span></div>
   <div class="sec-title">Trusted <em>Collaborations</em></div>
   <div class="sec-sub" style="margin-bottom:0">Partnerships with India's leading financial institutions</div>
-  <div class="prt-track">
-    <div class="prt-inner" id="prtInner"></div>
-  </div>
+  <div class="prt-track"><div class="prt-inner" id="prtInner"></div></div>
 </div>
 
 <!-- HELP -->
@@ -1185,21 +1153,9 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
   <div class="sec-eyebrow"><div class="sec-eyebrow-line"></div><span class="sec-eyebrow-text">Support</span></div>
   <div class="sec-title">Need <em style="color:#60a5fa">Help?</em></div>
   <div class="help-grid stagger">
-    <div class="help-card">
-      <div class="help-icon bl">💬</div>
-      <div class="help-text"><h4>Chat With Us</h4><p>AI assistant available 24/7 instantly</p></div>
-      <div class="help-arr">›</div>
-    </div>
-    <div class="help-card">
-      <div class="help-icon or">📞</div>
-      <div class="help-text"><h4>Request a Callback</h4><p>Our team will contact you shortly</p></div>
-      <div class="help-arr">›</div>
-    </div>
-    <div class="help-card">
-      <div class="help-icon gr">❓</div>
-      <div class="help-text"><h4>FAQs</h4><p>Get your doubts cleared instantly</p></div>
-      <div class="help-arr">›</div>
-    </div>
+    <div class="help-card"><div class="help-icon bl">💬</div><div class="help-text"><h4>Chat With Us</h4><p>AI assistant available 24/7 instantly</p></div><div class="help-arr">›</div></div>
+    <div class="help-card"><div class="help-icon or">📞</div><div class="help-text"><h4>Request a Callback</h4><p>Our team will contact you shortly</p></div><div class="help-arr">›</div></div>
+    <div class="help-card"><div class="help-icon gr">❓</div><div class="help-text"><h4>FAQs</h4><p>Get your doubts cleared instantly</p></div><div class="help-arr">›</div></div>
   </div>
 </div>
 
@@ -1218,10 +1174,7 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo-row">
-        <div class="footer-logo-mark">CE</div>
-        <div class="footer-logo-name">Credit<em>Exchange</em></div>
-      </div>
+      <div class="footer-logo-row"><div class="footer-logo-mark">CE</div><div class="footer-logo-name">Credit<em>Exchange</em></div></div>
       <p class="footer-desc">CreditExchange leverages advanced AI to make loan applications simple, fast, and accessible for everyone. One application, thousands of lenders, unbeatable rates.</p>
       <div class="footer-contact">
         <p>📍 First Floor, U2, CyberPark Sector 24, Gurugram, Haryana 122002</p>
@@ -1229,41 +1182,10 @@ footer{background:#020813;color:rgba(255,255,255,0.55);padding:72px 44px 36px;}
         <p style="margin-top:5px">📞 +91 9267943806</p>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Loan Products</h4>
-      <a href="#">Personal Loan</a>
-      <a href="#">Business Loan</a>
-      <a href="#">Home Loan</a>
-      <a href="#">Micro Loan</a>
-      <a href="#">Credit Card</a>
-      <a href="#">Loan Against Property</a>
-    </div>
-    <div class="footer-col">
-      <h4>Tax Services</h4>
-      <a href="#">Income Tax Filing</a>
-      <a href="#">GST Filing</a>
-    </div>
-    <div class="footer-col">
-      <h4>Resources</h4>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Partner with Us</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Refund Policy</a>
-    </div>
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <div class="social-links" style="margin-bottom:14px">
-        <a class="social-link" href="#">f</a>
-        <a class="social-link" href="#">𝕏</a>
-        <a class="social-link" href="#">📷</a>
-        <a class="social-link" href="#">in</a>
-      </div>
-      <a href="#">Book Appointment</a>
-      <a href="#">Careers</a>
-      <a href="#">Investors</a>
-    </div>
+    <div class="footer-col"><h4>Loan Products</h4><a href="#">Personal Loan</a><a href="#">Business Loan</a><a href="#">Home Loan</a><a href="#">Micro Loan</a><a href="#">Credit Card</a><a href="#">Loan Against Property</a></div>
+    <div class="footer-col"><h4>Tax Services</h4><a href="#">Income Tax Filing</a><a href="#">GST Filing</a></div>
+    <div class="footer-col"><h4>Resources</h4><a href="#">About Us</a><a href="#">Contact Us</a><a href="#">Partner with Us</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Refund Policy</a></div>
+    <div class="footer-col"><h4>Connect</h4><div class="social-links" style="margin-bottom:14px"><a class="social-link" href="#">f</a><a class="social-link" href="#">𝕏</a><a class="social-link" href="#">📷</a><a class="social-link" href="#">in</a></div><a href="#">Book Appointment</a><a href="#">Careers</a><a href="#">Investors</a></div>
   </div>
   <div class="footer-bottom">
     <span>© 2024 PruFin Ventures Private Limited. All Rights Reserved.</span>
@@ -1281,28 +1203,29 @@ function setStab(el){
 /* ── PREMIUM CAROUSEL ── */
 (function(){
   const TOTAL = 4;
-  const INTERVAL = 2500; // ms per slide
+  const INTERVAL = 3000;
   let cur = 0;
   let timer = null;
-  let barTimer = null;
 
   const slides  = document.getElementById('promoSlides');
   const dots    = document.querySelectorAll('.promo-dot');
   const bar     = document.getElementById('promoBar');
   const prevBtn = document.getElementById('promoPrev');
   const nextBtn = document.getElementById('promoNext');
+  const counter = document.getElementById('slideCounter');
 
   function goTo(n, restart){
     cur = (n + TOTAL) % TOTAL;
     slides.style.transform = 'translateX(-' + (cur * 100) + '%)';
     dots.forEach((d,i) => d.classList.toggle('active', i === cur));
+    counter.textContent = (cur + 1) + ' / ' + TOTAL;
     if(restart !== false) resetBar();
   }
 
   function resetBar(){
     bar.style.transition = 'none';
     bar.style.width = '0%';
-    clearTimeout(barTimer);
+    clearTimeout(window._barTimer);
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         bar.style.transition = 'width ' + INTERVAL + 'ms linear';
@@ -1321,25 +1244,28 @@ function setStab(el){
     bar.style.transition = 'none';
   }
 
-  /* dot clicks */
   dots.forEach((d,i) => {
-    d.addEventListener('click', () => {
-      goTo(i);
-      stopAuto();
-      startAuto();
-    });
+    d.addEventListener('click', () => { goTo(i); stopAuto(); startAuto(); });
   });
 
-  /* arrow clicks */
   prevBtn.addEventListener('click', () => { goTo(cur - 1); stopAuto(); startAuto(); });
   nextBtn.addEventListener('click', () => { goTo(cur + 1); stopAuto(); startAuto(); });
 
-  /* pause on hover */
-  const wrap = document.querySelector('.promo-carousel');
-  wrap.addEventListener('mouseenter', stopAuto);
-  wrap.addEventListener('mouseleave', () => { resetBar(); startAuto(); });
+  /* Touch swipe */
+  let touchX = 0;
+  const carousel = document.querySelector('.promo-carousel');
+  carousel.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+  carousel.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if(Math.abs(dx) > 40){
+      goTo(dx < 0 ? cur + 1 : cur - 1);
+      stopAuto(); startAuto();
+    }
+  });
 
-  /* kick off */
+  carousel.addEventListener('mouseenter', stopAuto);
+  carousel.addEventListener('mouseleave', () => { resetBar(); startAuto(); });
+
   goTo(0, false);
   resetBar();
   startAuto();

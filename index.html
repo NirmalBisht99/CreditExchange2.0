@@ -7,55 +7,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg:         #f0f6ff;
-  --bg-alt:     #e8f0fe;
-  --bg-card:    #ffffff;
-  --bg-section: #f7faff;
-  --blue:       #1540a0;
-  --blue-mid:   #1d4ed8;
-  --blue-bright:#2563eb;
-  --sky:        #3b82f6;
-  --sky-light:  #60a5fa;
-  --sky-pale:   #dbeafe;
-  --accent:     #f97316;
-  --accent-h:   #ea6c0a;
-  --gold:       #f59e0b;
-  --white:      #ffffff;
-  --text:       #0f172a;
-  --text-mid:   #1e3a5f;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
-  --border:     #e2e8f0;
-  --border-blue:#bfdbfe;
-  --r:          12px;
-  --r-lg:       18px;
-  --shadow-sm:  0 2px 12px rgba(37,99,235,0.08);
-  --shadow:     0 4px 28px rgba(37,99,235,0.12);
-  --shadow-lg:  0 12px 56px rgba(37,99,235,0.18);
+  --bg:#f0f6ff;--bg-alt:#e8f0fe;--bg-section:#f7faff;
+  --blue:#1540a0;--blue-mid:#1d4ed8;--blue-bright:#2563eb;
+  --sky:#3b82f6;--sky-light:#60a5fa;--sky-pale:#dbeafe;
+  --accent:#f97316;--accent-h:#ea6c0a;--gold:#f59e0b;
+  --text:#0f172a;--text-mid:#1e3a5f;--text-muted:#64748b;--text-light:#94a3b8;
+  --border:#e2e8f0;--border-blue:#bfdbfe;
+  --shadow-sm:0 2px 12px rgba(37,99,235,0.08);
+  --shadow:0 4px 28px rgba(37,99,235,0.12);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
-
 ::-webkit-scrollbar{width:6px;height:6px;}
 ::-webkit-scrollbar-track{background:#e8f0fe;}
 ::-webkit-scrollbar-thumb{background:var(--blue-bright);border-radius:6px;}
 
 /* ── NAV ── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
+  position:fixed;top:0;left:0;right:0;z-index:300;
   height:66px;
   background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border-blue);
-  display:flex;align-items:center;padding:0 44px;gap:0;
+  display:flex;align-items:center;padding:0 44px;
   box-shadow:0 2px 16px rgba(37,99,235,0.08);
 }
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:44px;}
-.nav-logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#1540a0,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;letter-spacing:-0.5px;box-shadow:0 0 20px rgba(59,130,246,0.3);}
-.nav-logo-text{font-weight:800;font-size:17px;color:var(--text);letter-spacing:-0.3px;}
+.nav-logo-mark{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#1540a0,#60a5fa);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white;box-shadow:0 0 20px rgba(59,130,246,0.3);}
+.nav-logo-text{font-weight:800;font-size:17px;color:var(--text);}
 .nav-logo-text em{font-style:normal;color:var(--blue-bright);}
-.nav-tagline{font-size:11px;color:var(--text-muted);font-weight:500;margin-left:2px;margin-top:2px;}
+.nav-tagline{font-size:11px;color:var(--text-muted);font-weight:500;margin-top:2px;}
 .nav-logo-col{display:flex;flex-direction:column;}
 .nav-links{display:flex;gap:2px;flex:1;}
 .nav-link{padding:7px 14px;border-radius:8px;font-size:13.5px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.18s;text-decoration:none;display:flex;align-items:center;gap:3px;}
@@ -63,158 +45,178 @@ nav{
 .nav-link svg{width:12px;height:12px;opacity:0.5;}
 .nav-actions{display:flex;align-items:center;gap:8px;}
 .btn-ghost{padding:8px 18px;border-radius:8px;font-size:13.5px;font-weight:600;color:var(--blue-mid);border:1.5px solid var(--border-blue);background:transparent;cursor:pointer;font-family:inherit;transition:all 0.18s;}
-.btn-ghost:hover{background:var(--sky-pale);border-color:var(--sky);color:var(--blue);}
+.btn-ghost:hover{background:var(--sky-pale);}
 .btn-nav-cta{padding:9px 22px;border-radius:8px;font-size:13.5px;font-weight:700;color:white;background:var(--accent);border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;display:flex;align-items:center;gap:6px;}
 .btn-nav-cta:hover{background:var(--accent-h);transform:translateY(-1px);box-shadow:0 4px 18px rgba(249,115,22,0.35);}
 .nav-location{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer;padding:6px 12px;border-radius:8px;border:1.5px solid var(--border);margin-right:6px;transition:all 0.18s;}
-.nav-location:hover{background:var(--sky-pale);color:var(--blue-bright);border-color:var(--border-blue);}
-.nav-location svg{width:14px;height:14px;color:var(--sky);}
+.nav-location:hover{background:var(--sky-pale);color:var(--blue-bright);}
+.nav-location svg{width:14px;height:14px;}
 
-/* ══════════════════════════════════════════
-   HERO — Bright Blue-White Theme
-══════════════════════════════════════════ */
-.hero{
+/* ════════════════════════════════════════
+   HERO SLIDESHOW — full section slides
+════════════════════════════════════════ */
+.hero-viewport{
   margin-top:66px;
-  min-height:640px;
-  position:relative;overflow:hidden;
-  background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 30%,#bfdbfe 60%,#e0f2fe 100%);
-  display:flex;align-items:center;
+  height:calc(100vh - 66px);
+  min-height:580px;
+  max-height:700px;
+  overflow:hidden;
+  position:relative;
+  z-index:1;
 }
-.hero::before{
+
+.hero-track{
+  display:flex;
+  width:400%;
+  height:100%;
+  transition:transform 0.72s cubic-bezier(0.77,0,0.18,1);
+  will-change:transform;
+}
+
+.hero-slide{
+  width:25%;
+  height:100%;
+  flex-shrink:0;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+}
+
+.hero-slide:nth-child(1){background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 35%,#bfdbfe 65%,#e0f2fe 100%);}
+.hero-slide:nth-child(2){background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 35%,#bbf7d0 65%,#d1fae5 100%);}
+.hero-slide:nth-child(3){background:linear-gradient(135deg,#fef9f0 0%,#fef3c7 35%,#fde68a 65%,#fef9c3 100%);}
+.hero-slide:nth-child(4){background:linear-gradient(135deg,#fdf4ff 0%,#f3e8ff 35%,#e9d5ff 65%,#faf5ff 100%);}
+
+.hero-slide::before{
   content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(37,99,235,0.06) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(37,99,235,0.06) 1px,transparent 1px);
+    linear-gradient(rgba(37,99,235,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(37,99,235,0.05) 1px,transparent 1px);
   background-size:44px 44px;
-  pointer-events:none;
+  pointer-events:none;z-index:0;
 }
-.hero-blob1{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(96,165,250,0.2) 0%,transparent 65%);top:-150px;left:-100px;pointer-events:none;animation:blobanim 8s ease-in-out infinite alternate;}
-.hero-blob2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,0.15) 0%,transparent 65%);bottom:-100px;right:-80px;pointer-events:none;animation:blobanim2 10s ease-in-out infinite alternate;}
-.hero-blob3{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.08) 0%,transparent 65%);top:40%;right:40%;pointer-events:none;}
-@keyframes blobanim{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.12) translate(30px,20px);}}
-@keyframes blobanim2{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.08) translate(-20px,30px);}}
+
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0;}
+.blob-1{width:560px;height:560px;top:-160px;left:-80px;background:radial-gradient(circle,rgba(96,165,250,0.18) 0%,transparent 65%);animation:ba1 9s ease-in-out infinite alternate;}
+.blob-2{width:440px;height:440px;bottom:-100px;right:-60px;background:radial-gradient(circle,rgba(59,130,246,0.13) 0%,transparent 65%);animation:ba2 11s ease-in-out infinite alternate;}
+@keyframes ba1{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.12) translate(28px,18px);}}
+@keyframes ba2{0%{transform:scale(1) translate(0,0);}100%{transform:scale(1.08) translate(-18px,28px);}}
 
 .hero-inner{
-  position:relative;z-index:5;width:100%;
-  padding:60px 44px 60px 90px;
-  display:grid;grid-template-columns:1fr 1fr;
-  align-items:center;gap:52px;max-width:1280px;margin:0 auto;
+  position:relative;z-index:5;
+  width:100%;max-width:1280px;
+  margin:0 auto;
+  padding:0 90px 0 90px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:52px;
+  height:100%;
 }
 
 .hero-badge{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(37,99,235,0.1);border:1.5px solid rgba(37,99,235,0.25);
   color:var(--blue-mid);padding:5px 16px 5px 10px;
-  border-radius:100px;font-size:12.5px;font-weight:700;margin-bottom:24px;
-  letter-spacing:0.03em;
+  border-radius:100px;font-size:12.5px;font-weight:700;margin-bottom:22px;
 }
 .badge-pulse{width:7px;height:7px;border-radius:50%;background:var(--blue-bright);animation:bpulse 1.8s ease-in-out infinite;box-shadow:0 0 8px rgba(37,99,235,0.5);}
 @keyframes bpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.35;transform:scale(0.65);}}
 
-.hero h1{
-  font-size:clamp(34px,4.2vw,54px);
+.hero-h1{
+  font-size:clamp(32px,4vw,52px);
   font-weight:800;color:var(--text);
   line-height:1.1;margin-bottom:8px;letter-spacing:-1.5px;
 }
-.hero h1 .red{
+.hero-h1 .accent-line{
   background:linear-gradient(90deg,#1d4ed8,#3b82f6);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.hero-sub{font-size:16px;color:var(--text-muted);line-height:1.75;margin-bottom:30px;max-width:420px;}
 
-.hero-btns{display:flex;gap:14px;align-items:center;margin-bottom:38px;}
-.btn-hero-fill{
-  padding:14px 30px;border-radius:10px;font-size:15px;font-weight:700;
+.hero-slide:nth-child(2) .accent-line{background:linear-gradient(90deg,#059669,#10b981);-webkit-background-clip:text;background-clip:text;}
+.hero-slide:nth-child(3) .accent-line{background:linear-gradient(90deg,#d97706,#f59e0b);-webkit-background-clip:text;background-clip:text;}
+.hero-slide:nth-child(4) .accent-line{background:linear-gradient(90deg,#7c3aed,#a855f7);-webkit-background-clip:text;background-clip:text;}
+
+.hero-sub{font-size:15.5px;color:var(--text-muted);line-height:1.75;margin-bottom:28px;max-width:420px;}
+.hero-btns{display:flex;gap:14px;align-items:center;margin-bottom:34px;}
+.btn-primary{
+  padding:13px 28px;border-radius:10px;font-size:15px;font-weight:700;
   background:linear-gradient(135deg,#1d4ed8,#2563eb);color:white;border:none;cursor:pointer;
   font-family:inherit;transition:all 0.22s;display:flex;align-items:center;gap:8px;
   box-shadow:0 4px 20px rgba(37,99,235,0.3);
 }
-.btn-hero-fill:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,99,235,0.45);}
-.btn-hero-outline{
-  padding:13px 28px;border-radius:10px;font-size:15px;font-weight:600;
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,99,235,0.45);}
+.hero-slide:nth-child(2) .btn-primary{background:linear-gradient(135deg,#059669,#10b981);box-shadow:0 4px 20px rgba(16,185,129,0.3);}
+.hero-slide:nth-child(3) .btn-primary{background:linear-gradient(135deg,#d97706,#f59e0b);box-shadow:0 4px 20px rgba(245,158,11,0.3);}
+.hero-slide:nth-child(4) .btn-primary{background:linear-gradient(135deg,#7c3aed,#a855f7);box-shadow:0 4px 20px rgba(168,85,247,0.3);}
+.btn-secondary{
+  padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;
   background:white;color:var(--blue-mid);border:1.5px solid var(--border-blue);
   cursor:pointer;font-family:inherit;transition:all 0.22s;
 }
-.btn-hero-outline:hover{border-color:var(--sky);background:var(--sky-pale);transform:translateY(-2px);}
+.btn-secondary:hover{border-color:var(--sky);background:var(--sky-pale);transform:translateY(-2px);}
 
-.hero-stats-wrap{display:flex;align-items:center;gap:0;}
-.hero-stat-num{font-size:26px;font-weight:800;color:var(--text);letter-spacing:-0.5px;line-height:1;}
-.hero-stat-lbl{font-size:12px;color:var(--text-muted);margin-top:3px;font-weight:500;}
-.hstat-div{width:1px;height:32px;background:var(--border);margin:0 24px;}
+.hero-stats{display:flex;align-items:center;gap:0;}
+.hstat{text-align:left;}
+.hstat-num{font-size:25px;font-weight:800;color:var(--text);line-height:1;}
+.hstat-lbl{font-size:11.5px;color:var(--text-muted);margin-top:2px;font-weight:500;}
+.hstat-div{width:1px;height:30px;background:var(--border);margin:0 22px;}
 
-.hero-slide-dots{display:flex;gap:7px;margin-top:24px;}
-.hero-sdot{width:8px;height:8px;border-radius:50%;background:rgba(37,99,235,0.2);cursor:pointer;border:none;padding:0;transition:all 0.25s;}
-.hero-sdot.active{width:24px;border-radius:4px;background:var(--blue-bright);box-shadow:0 0 8px rgba(37,99,235,0.4);}
-
-.rating-badge{
-  position:absolute;top:20px;right:20px;z-index:10;
-  background:linear-gradient(135deg,#1d4ed8,#2563eb);color:white;
-  border-radius:14px;padding:10px 16px;
-  font-weight:800;font-size:18px;text-align:center;
-  box-shadow:0 6px 24px rgba(37,99,235,0.35);
-  line-height:1;border:1px solid rgba(255,255,255,0.3);
-}
-.rating-badge .rb-sub{font-size:11px;font-weight:600;opacity:0.85;margin-top:3px;}
-.rating-badge .rb-star{font-size:13px;}
-
-.img-ring{
-  position:absolute;border-radius:26px;
-  border:1.5px solid rgba(37,99,235,0.18);
-  pointer-events:none;z-index:0;
-  animation:ringpulse 4s ease-in-out infinite;
-}
-.img-ring.r1{inset:-10px;animation-delay:0s;}
-.img-ring.r2{inset:-22px;animation-delay:0.7s;border-color:rgba(37,99,235,0.1);}
-.img-ring.r3{inset:-36px;animation-delay:1.4s;border-color:rgba(37,99,235,0.06);}
-@keyframes ringpulse{
-  0%,100%{opacity:1;transform:scale(1);}
-  50%{opacity:0.4;transform:scale(1.015);}
-}
-
-.float-dot{position:absolute;border-radius:50%;z-index:2;pointer-events:none;}
-.fd1{width:10px;height:10px;background:#2563eb;top:-18px;right:30%;opacity:0.7;animation:floatY 3s ease-in-out infinite;}
-.fd2{width:7px;height:7px;background:#f97316;bottom:15%;left:-18px;opacity:0.6;animation:floatY 4s ease-in-out infinite 0.5s;}
-.fd3{width:12px;height:12px;background:#60a5fa;bottom:-20px;right:20%;opacity:0.5;animation:floatY 3.5s ease-in-out infinite 1s;}
-.fd4{width:6px;height:6px;background:#818cf8;top:25%;right:-15px;opacity:0.7;animation:floatY 2.8s ease-in-out infinite 1.5s;}
-@keyframes floatY{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-8px);}
-}
-
-.corner-glow{position:absolute;width:60px;height:60px;pointer-events:none;z-index:3;}
-.cg-tl{top:-2px;left:-2px;background:radial-gradient(circle at top left,rgba(96,165,250,0.3),transparent 70%);}
-.cg-br{bottom:-2px;right:-2px;background:radial-gradient(circle at bottom right,rgba(96,165,250,0.2),transparent 70%);}
-
-.hero-img-frame{
+.hero-right{position:relative;}
+.img-wrap{
   border-radius:22px;overflow:hidden;
   box-shadow:0 28px 72px rgba(37,99,235,0.18),0 0 0 1px rgba(59,130,246,0.15);
-  height:460px;position:relative;z-index:1;
+  height:430px;position:relative;
 }
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;}
+.img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,0.3) 0%,transparent 50%);z-index:1;}
 
-.hero-clients-badge{
-  position:absolute;bottom:20px;left:20px;z-index:10;
-  background:rgba(255,255,255,0.92);border-radius:14px;
-  border:1px solid var(--border-blue);
-  padding:12px 18px;
-  backdrop-filter:blur(12px);
+.img-ring{position:absolute;border-radius:26px;border:1.5px solid rgba(37,99,235,0.18);pointer-events:none;z-index:0;animation:ringpulse 4s ease-in-out infinite;}
+.r1{inset:-10px;animation-delay:0s;}
+.r2{inset:-22px;animation-delay:0.7s;border-color:rgba(37,99,235,0.1);}
+.r3{inset:-36px;animation-delay:1.4s;border-color:rgba(37,99,235,0.06);}
+@keyframes ringpulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(1.015);}}
+
+.fdot{position:absolute;border-radius:50%;z-index:2;pointer-events:none;}
+.fd1{width:10px;height:10px;background:#2563eb;top:-16px;right:28%;opacity:0.7;animation:fy 3s ease-in-out infinite;}
+.fd2{width:7px;height:7px;background:#f97316;bottom:14%;left:-16px;opacity:0.6;animation:fy 4s ease-in-out infinite 0.5s;}
+.fd3{width:12px;height:12px;background:#60a5fa;bottom:-18px;right:18%;opacity:0.5;animation:fy 3.5s ease-in-out infinite 1s;}
+.fd4{width:6px;height:6px;background:#818cf8;top:24%;right:-14px;opacity:0.7;animation:fy 2.8s ease-in-out infinite 1.5s;}
+@keyframes fy{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+.rating-badge{
+  position:absolute;top:18px;right:18px;z-index:10;
+  background:linear-gradient(135deg,#1d4ed8,#2563eb);color:white;
+  border-radius:14px;padding:10px 16px;font-weight:800;font-size:17px;text-align:center;
+  box-shadow:0 6px 24px rgba(37,99,235,0.35);line-height:1;border:1px solid rgba(255,255,255,0.3);
+}
+.rating-badge .rb-sub{font-size:11px;font-weight:600;opacity:0.85;margin-top:3px;}
+
+.clients-badge{
+  position:absolute;bottom:18px;left:18px;z-index:10;
+  background:rgba(255,255,255,0.92);border-radius:14px;border:1px solid var(--border-blue);
+  padding:12px 16px;backdrop-filter:blur(12px);
   box-shadow:0 8px 28px rgba(37,99,235,0.15);
   display:flex;align-items:center;gap:10px;
-  animation:floatY 4s ease-in-out infinite;
+  animation:fy 4s ease-in-out infinite;
 }
-.hcb-num{font-size:20px;font-weight:800;color:var(--text);line-height:1;}
-.hcb-lbl{font-size:12px;color:var(--text-muted);font-weight:500;}
-.hcb-avatars{display:flex;}
-.hcb-av{width:28px;height:28px;border-radius:50%;border:2px solid white;margin-left:-6px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;color:white;}
+.cb-num{font-size:19px;font-weight:800;color:var(--text);line-height:1;}
+.cb-lbl{font-size:11.5px;color:var(--text-muted);font-weight:500;}
+.cb-avs{display:flex;}
+.cb-av{width:26px;height:26px;border-radius:50%;border:2px solid white;margin-left:-6px;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;color:white;}
 
-.hero-slides-container{position:relative;overflow:hidden;border-radius:22px;height:460px;}
-.hero-slides{display:flex;height:100%;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);}
-.hero-slide{min-width:100%;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.hero-slide img{width:100%;height:100%;object-fit:cover;display:block;}
-.slide-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to top,rgba(15,23,42,0.35) 0%,transparent 50%);
-  z-index:2;pointer-events:none;
+/* ── DOTS ── */
+.hero-dots{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  z-index:100;display:flex;gap:8px;
 }
+.hero-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(37,99,235,0.25);border:none;padding:0;cursor:pointer;
+  transition:all 0.28s;
+}
+.hero-dot.active{width:28px;border-radius:4px;background:var(--blue-bright);box-shadow:0 0 8px rgba(37,99,235,0.4);}
 
 /* ── SEARCH PANEL ── */
 .search-panel-wrap{
@@ -223,10 +225,8 @@ nav{
   margin-top:-52px;padding:0 44px;
 }
 .search-panel{
-  width:100%;max-width:1120px;
-  background:white;border-radius:22px;
-  box-shadow:0 24px 64px rgba(37,99,235,0.14);
-  overflow:hidden;border:1px solid var(--border-blue);
+  width:100%;max-width:1120px;background:white;border-radius:22px;
+  box-shadow:0 24px 64px rgba(37,99,235,0.14);overflow:hidden;border:1px solid var(--border-blue);
 }
 .search-tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;padding:0 10px;background:var(--bg-alt);scrollbar-width:none;}
 .search-tabs::-webkit-scrollbar{display:none;}
@@ -237,32 +237,15 @@ nav{
 .search-body{padding:26px 30px;display:flex;gap:14px;align-items:flex-end;background:white;}
 .s-field{flex:1;display:flex;flex-direction:column;gap:6px;}
 .s-field label{font-size:11.5px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;}
-.s-field select,.s-field input{
-  padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;
-  font-size:14px;font-family:inherit;color:var(--text);background:var(--bg);
-  transition:all 0.18s;outline:none;appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;
-}
-.s-field select option{background:white;color:var(--text);}
+.s-field select,.s-field input{padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;color:var(--text);background:var(--bg);transition:all 0.18s;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;}
 .s-field select:focus,.s-field input:focus{border-color:var(--sky);background:white;box-shadow:0 0 0 3px rgba(59,130,246,0.1);}
 .s-field input{background-image:none;padding-right:14px;background:var(--bg);}
 .s-field input::placeholder{color:var(--text-light);}
-.btn-search{
-  padding:0 32px;border-radius:10px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:white;
-  font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;
-  transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:8px;height:48px;flex-shrink:0;
-  box-shadow:0 4px 16px rgba(37,99,235,0.3);
-}
+.btn-search{padding:0 32px;border-radius:10px;background:linear-gradient(135deg,#1d4ed8,#2563eb);color:white;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:8px;height:48px;flex-shrink:0;box-shadow:0 4px 16px rgba(37,99,235,0.3);}
 .btn-search:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(37,99,235,0.45);}
 
-/* ── LOGOS STRIP ── */
-.logos-strip{
-  padding:28px 44px;background:white;
-  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-  display:flex;align-items:center;gap:20px;overflow:hidden;margin-top:64px;
-  box-shadow:0 2px 12px rgba(37,99,235,0.04);
-}
+/* ── LOGOS ── */
+.logos-strip{padding:28px 44px;background:white;border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:20px;overflow:hidden;margin-top:64px;box-shadow:0 2px 12px rgba(37,99,235,0.04);}
 .logos-label{font-size:11.5px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;}
 .logos-divider{width:1px;height:30px;background:var(--border);flex-shrink:0;}
 .logos-track{display:flex;gap:0;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
@@ -280,18 +263,18 @@ nav{
 .sec-title em{font-style:normal;color:var(--blue-bright);}
 .sec-sub{font-size:15px;color:var(--text-muted);margin-bottom:44px;max-width:520px;line-height:1.7;}
 
-/* ── SERVICES ── */
+/* SERVICES */
 .services-section{background:var(--bg-section);}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.svc-card{background:white;border-radius:20px;overflow:hidden;border:1.5px solid var(--border);cursor:pointer;transition:transform 0.28s,box-shadow 0.28s,border-color 0.28s;position:relative;}
+.svc-card{background:white;border-radius:20px;overflow:hidden;border:1.5px solid var(--border);cursor:pointer;transition:transform 0.28s,box-shadow 0.28s,border-color 0.28s;}
 .svc-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(37,99,235,0.14);border-color:var(--border-blue);}
 .svc-card-hero{height:200px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-.svc-card-hero.c1{background:linear-gradient(140deg,#1540a0 0%,#3b82f6 100%);}
-.svc-card-hero.c2{background:linear-gradient(140deg,#c2410c 0%,#f97316 100%);}
-.svc-card-hero.c3{background:linear-gradient(140deg,#065f46 0%,#10b981 100%);}
+.c1{background:linear-gradient(140deg,#1540a0 0%,#3b82f6 100%);}
+.c2{background:linear-gradient(140deg,#c2410c 0%,#f97316 100%);}
+.c3{background:linear-gradient(140deg,#065f46 0%,#10b981 100%);}
 .svc-card-bg-icon{position:absolute;font-size:100px;opacity:0.09;right:-15px;bottom:-20px;filter:blur(1px);}
 .svc-card-main-icon{font-size:60px;position:relative;z-index:2;filter:drop-shadow(0 6px 20px rgba(0,0,0,0.2));}
-.svc-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.25);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.4);color:white;padding:4px 11px;border-radius:100px;font-size:10.5px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;}
+.svc-badge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,0.25);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.4);color:white;padding:4px 11px;border-radius:100px;font-size:10.5px;font-weight:700;text-transform:uppercase;}
 .svc-card-body{padding:22px 24px 24px;}
 .svc-card-tag{font-size:11px;font-weight:700;color:var(--blue-bright);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:6px;}
 .svc-card-title{font-size:17px;font-weight:800;margin-bottom:14px;color:var(--text);line-height:1.3;}
@@ -299,25 +282,18 @@ nav{
 .svc-feat{display:flex;align-items:center;gap:5px;background:var(--bg-alt);border:1px solid var(--border-blue);padding:4px 11px;border-radius:100px;font-size:11.5px;color:var(--text-muted);font-weight:500;}
 .svc-cta{width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all 0.2s;color:white;}
 .svc-cta.c1{background:linear-gradient(135deg,#1d4ed8,#2563eb);}
-.svc-cta.c1:hover{background:linear-gradient(135deg,#1e40af,#1d4ed8);}
 .svc-cta.c2{background:var(--accent);}
-.svc-cta.c2:hover{background:var(--accent-h);}
 .svc-cta.c3{background:#059669;}
-.svc-cta.c3:hover{background:#047857;}
 
-/* ── STATS ── */
-.stats-strip{
-  background:linear-gradient(135deg,#1d4ed8 0%,#2563eb 50%,#1d4ed8 100%);
-  padding:52px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;overflow:hidden;
-}
+/* STATS */
+.stats-strip{background:linear-gradient(135deg,#1d4ed8 0%,#2563eb 50%,#1d4ed8 100%);padding:52px 44px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;overflow:hidden;}
 .stats-strip::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.08) 1px,transparent 1px);background-size:40px 40px;}
 .stat-box{text-align:center;padding:16px 20px;border-right:1px solid rgba(255,255,255,0.15);color:white;position:relative;z-index:1;}
 .stat-box:last-child{border-right:none;}
 .stat-num{font-size:42px;font-weight:800;color:white;line-height:1;letter-spacing:-1px;}
-.stat-num-blue{color:white;}
 .stat-lbl{font-size:14px;color:rgba(255,255,255,0.65);margin-top:7px;font-weight:500;}
 
-/* ── PRODUCTS ── */
+/* PRODUCTS */
 .products-section{background:var(--bg);}
 .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .prod-card{border:1.5px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all 0.22s;background:white;display:flex;flex-direction:column;gap:10px;}
@@ -334,22 +310,22 @@ nav{
 .prod-rate{display:flex;align-items:center;gap:7px;margin-top:4px;}
 .prod-rate-lbl{font-size:11px;color:var(--text-light);}
 .prod-rate-val{font-size:14.5px;font-weight:800;color:var(--blue-bright);}
-.prod-arrow{margin-top:auto;font-size:13px;font-weight:700;color:var(--blue-bright);display:flex;align-items:center;gap:4px;}
+.prod-arrow{margin-top:auto;font-size:13px;font-weight:700;color:var(--blue-bright);}
 
-/* ── HOW IT WORKS ── */
+/* HOW IT WORKS */
 .how-section{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);position:relative;overflow:hidden;}
 .how-section::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(37,99,235,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(37,99,235,0.05) 1px,transparent 1px);background-size:44px 44px;}
 .how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;}
 .how-connector{position:absolute;top:54px;left:calc(33.33% + 10px);width:calc(33.33% - 20px);height:2px;background:linear-gradient(90deg,rgba(37,99,235,0.3),rgba(249,115,22,0.5));z-index:0;border-radius:2px;}
 .how-connector2{left:calc(66.66% + 10px);}
 .step-card{background:white;border:1.5px solid var(--border-blue);border-radius:18px;padding:32px 28px;position:relative;z-index:1;transition:all 0.25s;box-shadow:var(--shadow-sm);}
-.step-card:hover{background:white;border-color:var(--sky);box-shadow:0 8px 32px rgba(37,99,235,0.12);}
+.step-card:hover{border-color:var(--sky);box-shadow:0 8px 32px rgba(37,99,235,0.12);}
 .step-badge{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#1d4ed8,#3b82f6);color:white;font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 4px 16px rgba(37,99,235,0.3);}
 .step-icon{font-size:30px;margin-bottom:12px;}
 .step-title{font-weight:800;font-size:17px;color:var(--text);margin-bottom:9px;}
 .step-desc{font-size:14px;color:var(--text-muted);line-height:1.7;}
 
-/* ── TAX ── */
+/* TAX */
 .tax-section{background:var(--bg-section);}
 .tax-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
 .tax-card{border-radius:18px;padding:34px 32px;display:flex;align-items:flex-start;gap:22px;cursor:pointer;transition:all 0.22s;border:1.5px solid var(--border);background:white;box-shadow:var(--shadow-sm);}
@@ -361,12 +337,11 @@ nav{
 .tax-body p{font-size:13.5px;color:var(--text-muted);line-height:1.7;}
 .tax-cta{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:var(--blue-bright);font-size:13.5px;font-weight:700;cursor:pointer;}
 
-/* ── TESTIMONIALS ── */
+/* TESTIMONIALS */
 .testi-section{background:var(--bg);overflow:hidden;}
 .testi-track{overflow:hidden;position:relative;}
-.testi-track::after,.testi-track::before{content:'';position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;}
-.testi-track::before{left:0;background:linear-gradient(to right,var(--bg),transparent);}
-.testi-track::after{right:0;background:linear-gradient(to left,var(--bg),transparent);}
+.testi-track::before{content:'';position:absolute;left:0;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;background:linear-gradient(to right,var(--bg),transparent);}
+.testi-track::after{content:'';position:absolute;right:0;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;background:linear-gradient(to left,var(--bg),transparent);}
 .testi-inner{display:flex;gap:20px;animation:scrollL 34s linear infinite;}
 .testi-inner:hover{animation-play-state:paused;}
 .testi-card{min-width:300px;background:white;border:1.5px solid var(--border);border-radius:16px;padding:26px;transition:all 0.2s;box-shadow:var(--shadow-sm);}
@@ -379,14 +354,14 @@ nav{
 .testi-name{font-weight:700;font-size:13.5px;color:var(--text);}
 .testi-role{font-size:11.5px;color:var(--text-light);}
 
-/* ── PARTNERS ── */
+/* PARTNERS */
 .partners-section{background:white;padding:60px 44px;border-top:1px solid var(--border);}
 .prt-track{overflow:hidden;margin-top:34px;mask-image:linear-gradient(to right,transparent 0%,black 10%,black 90%,transparent 100%);}
 .prt-inner{display:flex;gap:14px;animation:scrollL 20s linear infinite;align-items:center;}
 .prt-chip{min-width:160px;height:56px;background:var(--bg);border-radius:12px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--text-muted);padding:0 24px;white-space:nowrap;transition:all 0.2s;}
 .prt-chip:hover{border-color:var(--border-blue);color:var(--blue-bright);background:var(--sky-pale);}
 
-/* ── HELP ── */
+/* HELP */
 .help-section{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);padding:60px 44px;}
 .help-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px;}
 .help-card{background:white;border:1.5px solid var(--border);border-radius:16px;padding:22px 24px;display:flex;align-items:center;gap:16px;cursor:pointer;transition:all 0.22s;box-shadow:var(--shadow-sm);}
@@ -397,17 +372,11 @@ nav{
 .help-icon.gr{background:rgba(16,185,129,0.1);}
 .help-text h4{font-size:14.5px;font-weight:700;color:var(--text);}
 .help-text p{font-size:12.5px;color:var(--text-muted);margin-top:2px;}
-.help-arr{margin-left:auto;color:var(--text-light);font-size:20px;font-weight:300;}
+.help-arr{margin-left:auto;color:var(--text-light);font-size:20px;}
 
-/* ── CTA BANNER ── */
+/* CTA */
 .cta-wrap{padding:0 44px 80px;background:var(--bg-section);}
-.cta-banner{
-  border-radius:24px;padding:56px 64px;
-  background:linear-gradient(130deg,#1d4ed8 0%,#2563eb 50%,#1d4ed8 100%);
-  border:1px solid rgba(255,255,255,0.1);
-  display:flex;align-items:center;justify-content:space-between;
-  overflow:hidden;position:relative;
-}
+.cta-banner{border-radius:24px;padding:56px 64px;background:linear-gradient(130deg,#1d4ed8 0%,#2563eb 50%,#1d4ed8 100%);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;overflow:hidden;position:relative;}
 .cta-banner::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px);background-size:40px 40px;}
 .cta-banner::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 65%);right:-100px;top:50%;transform:translateY(-50%);}
 .cta-text{position:relative;z-index:1;}
@@ -416,7 +385,7 @@ nav{
 .btn-cta-final{position:relative;z-index:1;padding:16px 40px;border-radius:12px;background:white;color:var(--blue-mid);font-size:15.5px;font-weight:800;border:none;cursor:pointer;font-family:inherit;transition:all 0.22s;white-space:nowrap;flex-shrink:0;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
 .btn-cta-final:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,0.2);background:var(--sky-pale);}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;border-top:1px solid rgba(37,99,235,0.2);}
 .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1fr;gap:44px;margin-bottom:56px;}
 .footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
@@ -431,9 +400,9 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:26px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,0.2);}
 .social-links{display:flex;gap:8px;}
 .social-link{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:14px;text-decoration:none;transition:all 0.2s;color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.08);}
-.social-link:hover{background:rgba(59,130,246,0.2);color:#93c5fd;border-color:rgba(96,165,250,0.3);}
+.social-link:hover{background:rgba(59,130,246,0.2);color:#93c5fd;}
 
-/* ── REVEAL ANIMATIONS ── */
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.vis{opacity:1;transform:none;}
 .stagger > *{opacity:0;transform:translateY(24px);transition:opacity 0.5s ease,transform 0.5s ease;}
@@ -444,11 +413,10 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
 .stagger.vis > *:nth-child(5){transition-delay:320ms;opacity:1;transform:none;}
 .stagger.vis > *:nth-child(6){transition-delay:400ms;opacity:1;transform:none;}
 
-/* ── RESPONSIVE ── */
 @media(max-width:980px){
   nav{padding:0 18px;}
   .nav-links{display:none;}
-  .hero-inner{grid-template-columns:1fr;padding:44px 18px 0;}
+  .hero-inner{grid-template-columns:1fr;padding:30px 18px;}
   .hero-right{display:none;}
   .search-panel-wrap{padding:0 18px;}
   .search-body{flex-direction:column;}
@@ -497,136 +465,170 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-blob1"></div>
-  <div class="hero-blob2"></div>
-  <div class="hero-blob3"></div>
-  <div class="hero-inner">
+<!-- HERO SLIDESHOW -->
+<div class="hero-viewport">
+  <div class="hero-track" id="heroTrack">
 
-    <!-- LEFT -->
-    <div class="hero-text">
-      <div class="hero-badge"><div class="badge-pulse"></div>India's #1 AI-Driven Loan Platform</div>
-
-      <div id="heroHeadlineWrap">
-        <h1 id="heroH1" style="transition:opacity 0.4s,transform 0.4s">
-          <span id="heroLine1">Let AI Find the</span><br>
-          <span id="heroLine2" class="red">Best Loan for You</span>
-        </h1>
-      </div>
-
-      <p class="hero-sub" id="heroSub">Smart matching based on your financial profile. Get personalized loan recommendations from 1000+ lenders instantly.</p>
-
-      <div class="hero-btns">
-        <button class="btn-hero-fill" id="heroBtn1">Get Started →</button>
-        <button class="btn-hero-outline">Book Appointment</button>
-      </div>
-
-      <div class="hero-stats-wrap">
-        <div class="hero-stat">
-          <div class="hero-stat-num">50,000+</div>
-          <div class="hero-stat-lbl">Happy Clients</div>
-        </div>
-        <div class="hstat-div"></div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">1,000+</div>
-          <div class="hero-stat-lbl">Lenders</div>
-        </div>
-        <div class="hstat-div"></div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">30%</div>
-          <div class="hero-stat-lbl">Avg. Savings</div>
-        </div>
-      </div>
-
-      <div class="hero-slide-dots" id="heroSlideDots">
-        <button class="hero-sdot active"></button>
-        <button class="hero-sdot"></button>
-        <button class="hero-sdot"></button>
-        <button class="hero-sdot"></button>
-      </div>
-    </div>
-
-    <!-- RIGHT with animations -->
-    <div class="hero-right" style="position:relative;">
-      <div class="img-ring r1"></div>
-      <div class="img-ring r2"></div>
-      <div class="img-ring r3"></div>
-      <div class="float-dot fd1"></div>
-      <div class="float-dot fd2"></div>
-      <div class="float-dot fd3"></div>
-      <div class="float-dot fd4"></div>
-      <div class="corner-glow cg-tl"></div>
-      <div class="corner-glow cg-br"></div>
-
-      <div class="rating-badge">
-        <div class="rb-star">✦ 4.9/5</div>
-        <div class="rb-sub">Client Rating</div>
-      </div>
-
-      <!-- Image carousel — financial/loan themed images -->
-      <div class="hero-slides-container" id="heroSlides">
-        <div class="hero-slides" id="heroSlidesTrack">
-          <!-- Slide 1 — Loan approval / financial freedom -->
-          <div class="hero-slide">
-            <img
-              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=700&q=80&auto=format&fit=crop"
-              alt="Financial planning and savings"
-              loading="eager"
-            />
-            <div class="slide-overlay"></div>
+    <!-- SLIDE 1 -->
+    <div class="hero-slide">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><div class="badge-pulse"></div>India's #1 AI-Driven Loan Platform</div>
+          <h1 class="hero-h1">Let AI Find the<br><span class="accent-line">Best Loan for You</span></h1>
+          <p class="hero-sub">Smart matching based on your financial profile. Get personalized loan recommendations from 1000+ lenders instantly.</p>
+          <div class="hero-btns">
+            <button class="btn-primary">Get Started →</button>
+            <button class="btn-secondary">Book Appointment</button>
           </div>
-          <!-- Slide 2 — Happy couple / home loan -->
-          <div class="hero-slide">
-            <img
-              src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=700&q=80&auto=format&fit=crop"
-              alt="Happy couple celebrating home purchase"
-              loading="lazy"
-            />
-            <div class="slide-overlay"></div>
-          </div>
-          <!-- Slide 3 — Business growth / entrepreneur -->
-          <div class="hero-slide">
-            <img
-              src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=700&q=80&auto=format&fit=crop"
-              alt="Business professional reviewing loan documents"
-              loading="lazy"
-            />
-            <div class="slide-overlay"></div>
-          </div>
-          <!-- Slide 4 — Digital banking / credit card -->
-          <div class="hero-slide">
-            <img
-              src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=700&q=80&auto=format&fit=crop"
-              alt="Digital banking and credit management"
-              loading="lazy"
-            />
-            <div class="slide-overlay"></div>
+          <div class="hero-stats">
+            <div class="hstat"><div class="hstat-num">50,000+</div><div class="hstat-lbl">Happy Clients</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">1,000+</div><div class="hstat-lbl">Lenders</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">30%</div><div class="hstat-lbl">Avg. Savings</div></div>
           </div>
         </div>
-      </div>
-
-      <!-- Clients badge -->
-      <div class="hero-clients-badge">
-        <div>
-          <div class="hcb-num">50,000+</div>
-          <div class="hcb-lbl">Happy Clients</div>
-        </div>
-        <div class="hcb-avatars">
-          <div class="hcb-av" style="background:#1d4ed8;">AV</div>
-          <div class="hcb-av" style="background:#f97316;margin-left:-8px;">RK</div>
-          <div class="hcb-av" style="background:#10b981;margin-left:-8px;">PM</div>
+        <div class="hero-right">
+          <div class="img-ring r1"></div><div class="img-ring r2"></div><div class="img-ring r3"></div>
+          <div class="fdot fd1"></div><div class="fdot fd2"></div><div class="fdot fd3"></div><div class="fdot fd4"></div>
+          <div class="rating-badge"><div>✦ 4.9/5</div><div class="rb-sub">Client Rating</div></div>
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=700&q=80&auto=format&fit=crop" alt="Financial planning"/>
+            <div class="img-overlay"></div>
+          </div>
+          <div class="clients-badge">
+            <div><div class="cb-num">50,000+</div><div class="cb-lbl">Happy Clients</div></div>
+            <div class="cb-avs"><div class="cb-av" style="background:#1d4ed8;">AV</div><div class="cb-av" style="background:#f97316;">RK</div><div class="cb-av" style="background:#10b981;">PM</div></div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- SLIDE 2 -->
+    <div class="hero-slide">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><div class="badge-pulse"></div>India's #1 AI-Driven Loan Platform</div>
+          <h1 class="hero-h1">Struggling with your<br><span class="accent-line">Current Loan Rate?</span></h1>
+          <p class="hero-sub">Switch to better, verified lenders effortlessly. No disruption, no hassle — just results that save you money.</p>
+          <div class="hero-btns">
+            <button class="btn-primary">Switch Now →</button>
+            <button class="btn-secondary">Book Appointment</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat"><div class="hstat-num">50,000+</div><div class="hstat-lbl">Happy Clients</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">1,000+</div><div class="hstat-lbl">Lenders</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">30%</div><div class="hstat-lbl">Avg. Savings</div></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="img-ring r1"></div><div class="img-ring r2"></div><div class="img-ring r3"></div>
+          <div class="fdot fd1"></div><div class="fdot fd2"></div><div class="fdot fd3"></div><div class="fdot fd4"></div>
+          <div class="rating-badge"><div>✦ 4.9/5</div><div class="rb-sub">Client Rating</div></div>
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=700&q=80&auto=format&fit=crop" alt="Home loan"/>
+            <div class="img-overlay"></div>
+          </div>
+          <div class="clients-badge">
+            <div><div class="cb-num">50,000+</div><div class="cb-lbl">Happy Clients</div></div>
+            <div class="cb-avs"><div class="cb-av" style="background:#1d4ed8;">AV</div><div class="cb-av" style="background:#f97316;">RK</div><div class="cb-av" style="background:#10b981;">PM</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="hero-slide">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><div class="badge-pulse"></div>India's #1 AI-Driven Loan Platform</div>
+          <h1 class="hero-h1">No Upfront Cost.<br><span class="accent-line">Pay After Approval.</span></h1>
+          <p class="hero-sub">Personal Loans, Home Loans, Credit Cards — all in one place. Zero risk, maximum value for every Indian.</p>
+          <div class="hero-btns">
+            <button class="btn-primary">Explore Loans →</button>
+            <button class="btn-secondary">Book Appointment</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat"><div class="hstat-num">50,000+</div><div class="hstat-lbl">Happy Clients</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">1,000+</div><div class="hstat-lbl">Lenders</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">30%</div><div class="hstat-lbl">Avg. Savings</div></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="img-ring r1"></div><div class="img-ring r2"></div><div class="img-ring r3"></div>
+          <div class="fdot fd1"></div><div class="fdot fd2"></div><div class="fdot fd3"></div><div class="fdot fd4"></div>
+          <div class="rating-badge"><div>✦ 4.9/5</div><div class="rb-sub">Client Rating</div></div>
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=700&q=80&auto=format&fit=crop" alt="Business loan"/>
+            <div class="img-overlay"></div>
+          </div>
+          <div class="clients-badge">
+            <div><div class="cb-num">50,000+</div><div class="cb-lbl">Happy Clients</div></div>
+            <div class="cb-avs"><div class="cb-av" style="background:#1d4ed8;">AV</div><div class="cb-av" style="background:#f97316;">RK</div><div class="cb-av" style="background:#10b981;">PM</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="hero-slide">
+      <div class="blob blob-1"></div><div class="blob blob-2"></div>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge"><div class="badge-pulse"></div>India's #1 AI-Driven Loan Platform</div>
+          <h1 class="hero-h1">Stop Settling,<br><span class="accent-line">Start Saving</span></h1>
+          <p class="hero-sub">From personal loans to GST filing — one partner, zero hassle. Replace your lender at your convenience.</p>
+          <div class="hero-btns">
+            <button class="btn-primary">Explore Services →</button>
+            <button class="btn-secondary">Book Appointment</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hstat"><div class="hstat-num">50,000+</div><div class="hstat-lbl">Happy Clients</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">1,000+</div><div class="hstat-lbl">Lenders</div></div>
+            <div class="hstat-div"></div>
+            <div class="hstat"><div class="hstat-num">30%</div><div class="hstat-lbl">Avg. Savings</div></div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="img-ring r1"></div><div class="img-ring r2"></div><div class="img-ring r3"></div>
+          <div class="fdot fd1"></div><div class="fdot fd2"></div><div class="fdot fd3"></div><div class="fdot fd4"></div>
+          <div class="rating-badge"><div>✦ 4.9/5</div><div class="rb-sub">Client Rating</div></div>
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=700&q=80&auto=format&fit=crop" alt="Digital banking"/>
+            <div class="img-overlay"></div>
+          </div>
+          <div class="clients-badge">
+            <div><div class="cb-num">50,000+</div><div class="cb-lbl">Happy Clients</div></div>
+            <div class="cb-avs"><div class="cb-av" style="background:#1d4ed8;">AV</div><div class="cb-av" style="background:#f97316;">RK</div><div class="cb-av" style="background:#10b981;">PM</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /hero-track -->
+
+  <!-- Dot indicators only (no arrows) -->
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
   </div>
-</div>
+
+</div><!-- /hero-viewport -->
 
 <!-- SEARCH PANEL -->
 <div class="search-panel-wrap">
   <div class="search-panel">
-    <div class="search-tabs" id="sTabs">
+    <div class="search-tabs">
       <div class="s-tab active" onclick="setStab(this)"><div class="s-tab-icon">👤</div>Personal Loan</div>
       <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">💳</div>Credit Card</div>
       <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">🏢</div>Business Loan</div>
@@ -636,22 +638,10 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
       <div class="s-tab" onclick="setStab(this)"><div class="s-tab-icon">📄</div>Tax Filing</div>
     </div>
     <div class="search-body">
-      <div class="s-field">
-        <label>Loan Amount</label>
-        <select><option>₹1 Lakh – ₹5 Lakhs</option><option>₹5 Lakhs – ₹20 Lakhs</option><option>₹20 Lakhs – ₹50 Lakhs</option><option>₹50 Lakhs+</option></select>
-      </div>
-      <div class="s-field">
-        <label>Employment Type</label>
-        <select><option>Salaried</option><option>Self Employed</option><option>Business Owner</option></select>
-      </div>
-      <div class="s-field">
-        <label>Monthly Income</label>
-        <select><option>₹25K – ₹50K</option><option>₹50K – ₹1L</option><option>₹1L – ₹3L</option><option>₹3L+</option></select>
-      </div>
-      <div class="s-field">
-        <label>Mobile Number</label>
-        <input type="tel" placeholder="Enter your mobile" />
-      </div>
+      <div class="s-field"><label>Loan Amount</label><select><option>₹1 Lakh – ₹5 Lakhs</option><option>₹5 Lakhs – ₹20 Lakhs</option><option>₹20 Lakhs – ₹50 Lakhs</option><option>₹50 Lakhs+</option></select></div>
+      <div class="s-field"><label>Employment Type</label><select><option>Salaried</option><option>Self Employed</option><option>Business Owner</option></select></div>
+      <div class="s-field"><label>Monthly Income</label><select><option>₹25K – ₹50K</option><option>₹50K – ₹1L</option><option>₹1L – ₹3L</option><option>₹3L+</option></select></div>
+      <div class="s-field"><label>Mobile Number</label><input type="tel" placeholder="Enter your mobile"/></div>
       <button class="btn-search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         Check Offers
@@ -664,9 +654,7 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
 <div class="logos-strip reveal">
   <span class="logos-label">Trusted by</span>
   <div class="logos-divider"></div>
-  <div class="logos-track">
-    <div class="logos-inner" id="logosInner"></div>
-  </div>
+  <div class="logos-track"><div class="logos-inner" id="logosInner"></div></div>
 </div>
 
 <!-- SERVICES -->
@@ -677,40 +665,25 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
   <div class="services-grid stagger">
     <div class="svc-card">
       <div class="svc-card-hero c1"><div class="svc-card-bg-icon">💰</div><div class="svc-card-main-icon">💸</div><div class="svc-badge">Most Popular</div></div>
-      <div class="svc-card-body">
-        <div class="svc-card-tag">Personal Loans</div>
-        <div class="svc-card-title">Achieve your goals with easy personal loans</div>
-        <div class="svc-card-feats"><div class="svc-feat">✅ Low Interest Rates</div><div class="svc-feat">⚡ Instant Disbursal</div><div class="svc-feat">📋 Min Documents</div></div>
-        <button class="svc-cta c1">Apply Now</button>
-      </div>
+      <div class="svc-card-body"><div class="svc-card-tag">Personal Loans</div><div class="svc-card-title">Achieve your goals with easy personal loans</div><div class="svc-card-feats"><div class="svc-feat">✅ Low Interest Rates</div><div class="svc-feat">⚡ Instant Disbursal</div><div class="svc-feat">📋 Min Documents</div></div><button class="svc-cta c1">Apply Now</button></div>
     </div>
     <div class="svc-card">
       <div class="svc-card-hero c2"><div class="svc-card-bg-icon">📈</div><div class="svc-card-main-icon">🚀</div><div class="svc-badge">Up to ₹50L</div></div>
-      <div class="svc-card-body">
-        <div class="svc-card-tag">Business Loans</div>
-        <div class="svc-card-title">Grow your business with tailored funding solutions</div>
-        <div class="svc-card-feats"><div class="svc-feat">💼 Up to ₹50L</div><div class="svc-feat">📊 Flexible Terms</div><div class="svc-feat">🤝 Expert Help</div></div>
-        <button class="svc-cta c2">Apply Now</button>
-      </div>
+      <div class="svc-card-body"><div class="svc-card-tag">Business Loans</div><div class="svc-card-title">Grow your business with tailored funding solutions</div><div class="svc-card-feats"><div class="svc-feat">💼 Up to ₹50L</div><div class="svc-feat">📊 Flexible Terms</div><div class="svc-feat">🤝 Expert Help</div></div><button class="svc-cta c2">Apply Now</button></div>
     </div>
     <div class="svc-card">
       <div class="svc-card-hero c3"><div class="svc-card-bg-icon">🏠</div><div class="svc-card-main-icon">🏡</div><div class="svc-badge">Best Rates</div></div>
-      <div class="svc-card-body">
-        <div class="svc-card-tag">Home Loans</div>
-        <div class="svc-card-title">Turn your dream home into reality with best rates</div>
-        <div class="svc-card-feats"><div class="svc-feat">🎯 Best Rates</div><div class="svc-feat">🤖 AI-Driven</div><div class="svc-feat">🏆 Top Lenders</div></div>
-        <button class="svc-cta c3">Apply Now</button>
-      </div>
+      <div class="svc-card-body"><div class="svc-card-tag">Home Loans</div><div class="svc-card-title">Turn your dream home into reality with best rates</div><div class="svc-card-feats"><div class="svc-feat">🎯 Best Rates</div><div class="svc-feat">🤖 AI-Driven</div><div class="svc-feat">🏆 Top Lenders</div></div><button class="svc-cta c3">Apply Now</button></div>
     </div>
   </div>
 </section>
 
 <!-- STATS -->
 <div class="stats-strip reveal">
-  <div class="stat-box"><div class="stat-num stat-num-blue" data-target="50000" data-suffix="K+">0</div><div class="stat-lbl">Happy Customers</div></div>
-  <div class="stat-box"><div class="stat-num stat-num-blue" data-target="1000" data-suffix="+">0</div><div class="stat-lbl">Lending Partners</div></div>
-  <div class="stat-box"><div class="stat-num stat-num-blue" data-target="500" data-prefix="₹" data-suffix="Cr+">0</div><div class="stat-lbl">Loans Disbursed</div></div>
-  <div class="stat-box"><div class="stat-num stat-num-blue" data-target="4.8" data-suffix="★" data-decimal="1">0</div><div class="stat-lbl">Average Rating</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="50000" data-suffix="K+">0</div><div class="stat-lbl">Happy Customers</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="1000" data-suffix="+">0</div><div class="stat-lbl">Lending Partners</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="500" data-prefix="₹" data-suffix="Cr+">0</div><div class="stat-lbl">Loans Disbursed</div></div>
+  <div class="stat-box"><div class="stat-num" data-target="4.8" data-suffix="★" data-decimal="1">0</div><div class="stat-lbl">Average Rating</div></div>
 </div>
 
 <!-- PRODUCTS -->
@@ -779,7 +752,7 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
   </div>
 </div>
 
-<!-- CTA BANNER -->
+<!-- CTA -->
 <div class="cta-wrap reveal">
   <div class="cta-banner">
     <div class="cta-text">
@@ -814,57 +787,74 @@ footer{background:#0f172a;color:rgba(255,255,255,0.35);padding:72px 44px 36px;bo
 </footer>
 
 <script>
-function setStab(el){
-  document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('active'));
+/* HERO SLIDESHOW */
+const track   = document.getElementById('heroTrack');
+const dots    = document.querySelectorAll('.hero-dot');
+const TOTAL   = 4;
+let current   = 0;
+let autoTimer = null;
+let isDragging = false, startX = 0, dragDelta = 0;
+
+function goTo(n, animate = true) {
+  const next = (n + TOTAL) % TOTAL;
+  if (!animate) track.style.transition = 'none';
+  else          track.style.transition  = 'transform 0.72s cubic-bezier(0.77,0,0.18,1)';
+  track.style.transform = `translateX(-${next * 25}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === next));
+  current = next;
+}
+
+dots.forEach((d, i) => d.addEventListener('click', () => { goTo(i); resetTimer(); }));
+
+function resetTimer() {
+  clearInterval(autoTimer);
+  autoTimer = setInterval(() => goTo(current + 1), 4500);
+}
+resetTimer();
+
+const vp = document.querySelector('.hero-viewport');
+function onDragStart(x) { isDragging = true; startX = x; dragDelta = 0; track.style.transition = 'none'; }
+function onDragMove(x)  { if (!isDragging) return; dragDelta = x - startX; track.style.transform = `translateX(calc(-${current * 25}% + ${dragDelta}px))`; }
+function onDragEnd()    {
+  if (!isDragging) return; isDragging = false;
+  if      (dragDelta < -60) goTo(current + 1);
+  else if (dragDelta >  60) goTo(current - 1);
+  else                      goTo(current);
+  resetTimer();
+}
+
+vp.addEventListener('mousedown',  e => onDragStart(e.clientX));
+window.addEventListener('mousemove', e => { if (isDragging) { e.preventDefault(); onDragMove(e.clientX); } }, { passive: false });
+window.addEventListener('mouseup', onDragEnd);
+vp.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX), { passive: true });
+vp.addEventListener('touchmove',  e => onDragMove(e.touches[0].clientX),  { passive: true });
+vp.addEventListener('touchend',   onDragEnd);
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft')  { goTo(current - 1); resetTimer(); }
+  if (e.key === 'ArrowRight') { goTo(current + 1); resetTimer(); }
+});
+
+/* SEARCH TABS */
+function setStab(el) {
+  document.querySelectorAll('.s-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
 }
 
-const heroData = [
-  {line1:'Let AI Find the',line2:'Best Loan for You',sub:'Smart matching based on your financial profile. Get personalized loan recommendations from 1000+ lenders instantly.',btn:'Get Started →'},
-  {line1:'Struggling with your',line2:'Current Loan Rate?',sub:'Switch to better, verified lenders effortlessly. No disruption, no hassle — just results.',btn:'Switch Now →'},
-  {line1:'No Upfront Cost.',line2:'Pay After Approval.',sub:'Personal Loans, Home Loans, Credit Cards — all in one place. Zero risk, maximum value.',btn:'Explore Loans →'},
-  {line1:'Stop Settling,',line2:'Start Saving',sub:'From personal loans to GST filing — one partner, zero hassle. Replace your lender at your convenience.',btn:'Explore Services →'}
+/* LOGOS */
+const logos = ['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance','Power Finance Corp','HUL'];
+document.getElementById('logosInner').innerHTML = [...logos,...logos].map(l => `<div class="logo-chip">${l}</div>`).join('');
+
+/* TESTIMONIALS */
+const testis = [
+  {name:'Anita Verma',  init:'AV', title:'Transparent & Trustworthy',    text:'No hidden fees, no surprise charges. The AI platform showed me exactly what I qualified for.'},
+  {name:'Sachin Saini', init:'SS', title:'A Game Changer for Loans',      text:'CreditExchange made getting a loan incredibly simple and fast. The AI-driven platform understood my needs perfectly.'},
+  {name:'Priya K',      init:'PK', title:'Finally, the Real Loan Helper', text:'The AI technology is impressive — it found me the best rates and guided me through the entire process.'},
+  {name:'Sumeet D',     init:'SD', title:'Best Rates Around!',            text:'I saved a lot on my loan thanks to their AI that compared multiple lenders and presented competitive options.'},
+  {name:'Rahul Sharma', init:'RS', title:'Exceptional Service',           text:'Outstanding support team available 24/7. Got approved within hours of applying!'},
+  {name:'Meena Patel',  init:'MP', title:'5 Star Experience',             text:'Applied in the morning and had money in my account by afternoon. Seamless process!'},
 ];
-
-let heroCur=0,heroTimer=null;
-const heroH1=document.getElementById('heroH1');
-const heroLine1=document.getElementById('heroLine1');
-const heroLine2=document.getElementById('heroLine2');
-const heroSub=document.getElementById('heroSub');
-const heroBtn1=document.getElementById('heroBtn1');
-const heroSlidesTrack=document.getElementById('heroSlidesTrack');
-const heroDots=document.querySelectorAll('.hero-sdot');
-
-function goHero(n){
-  heroCur=(n+heroData.length)%heroData.length;
-  const d=heroData[heroCur];
-  heroH1.style.opacity='0';heroH1.style.transform='translateY(12px)';heroSub.style.opacity='0';
-  setTimeout(()=>{
-    heroLine1.textContent=d.line1;heroLine2.textContent=d.line2;heroSub.textContent=d.sub;heroBtn1.textContent=d.btn;
-    heroH1.style.opacity='1';heroH1.style.transform='translateY(0)';heroSub.style.opacity='1';
-  },300);
-  heroSlidesTrack.style.transform='translateX(-'+(heroCur*100)+'%)';
-  heroDots.forEach((dd,i)=>dd.classList.toggle('active',i===heroCur));
-}
-heroDots.forEach((d,i)=>{d.addEventListener('click',()=>{goHero(i);resetHeroTimer();});});
-heroSub.style.transition='opacity 0.35s';
-function resetHeroTimer(){clearInterval(heroTimer);heroTimer=setInterval(()=>goHero(heroCur+1),4500);}
-resetHeroTimer();
-
-const logos=['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance','Power Finance Corp','HUL'];
-const lI=document.getElementById('logosInner');
-lI.innerHTML=[...logos,...logos].map(l=>`<div class="logo-chip">${l}</div>`).join('');
-
-const testis=[
-  {name:'Anita Verma',init:'AV',title:'Transparent & Trustworthy',text:'No hidden fees, no surprise charges. The AI platform showed me exactly what I qualified for. Completely transparent.'},
-  {name:'Sachin Saini',init:'SS',title:'A Game Changer for Loans',text:'CreditExchange made getting a loan incredibly simple and fast. The AI-driven platform understood my needs perfectly.'},
-  {name:'Priya K',init:'PK',title:'Finally, the Real Loan Helper',text:'The AI technology is impressive — it found me the best rates and guided me through the entire process.'},
-  {name:'Sumeet Deshpande',init:'SD',title:'Best Rates Around!',text:'I saved a lot on my loan thanks to their AI that compared multiple lenders and presented the most competitive options.'},
-  {name:'Rahul Sharma',init:'RS',title:'Exceptional Customer Service',text:'Outstanding support team available 24/7 to answer my questions. Got approved within hours of applying!'},
-  {name:'Meena Patel',init:'MP',title:'5 Star Experience',text:'Applied in the morning and had money in my account by afternoon. Seamless process and unbeatable rates.'},
-];
-const tI=document.getElementById('testiInner');
-tI.innerHTML=[...testis,...testis].map(t=>`
+document.getElementById('testiInner').innerHTML = [...testis,...testis].map(t => `
   <div class="testi-card">
     <div class="testi-stars">★★★★★</div>
     <div class="testi-title">${t.title}</div>
@@ -875,31 +865,38 @@ tI.innerHTML=[...testis,...testis].map(t=>`
     </div>
   </div>`).join('');
 
-const partners=['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance'];
-const pI=document.getElementById('prtInner');
-pI.innerHTML=[...partners,...partners].map(p=>`<div class="prt-chip">${p}</div>`).join('');
+/* PARTNERS */
+const partners = ['HDFC Bank','SBI','ICICI Bank','Axis Bank','Kotak Mahindra','Bajaj Finserv','Piramal Finance','L&T Finance','Tata Capital','Mahindra Finance'];
+document.getElementById('prtInner').innerHTML = [...partners,...partners].map(p => `<div class="prt-chip">${p}</div>`).join('');
 
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');if(e.target.classList.contains('stats-strip'))startCounters();}});
-},{threshold:0.08});
-document.querySelectorAll('.reveal,.stagger').forEach(el=>obs.observe(el));
+/* SCROLL REVEAL */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      if (e.target.classList.contains('stats-strip')) startCounters();
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal,.stagger').forEach(el => obs.observe(el));
 
-let counted=false;
-function startCounters(){
-  if(counted)return;counted=true;
-  document.querySelectorAll('.stat-num[data-target]').forEach(el=>{
-    const target=parseFloat(el.dataset.target);
-    const suffix=el.dataset.suffix||'';
-    const prefix=el.dataset.prefix||'';
-    const dec=parseInt(el.dataset.decimal)||0;
-    const duration=1600,steps=60;
-    const increment=target/steps;
-    let current=0;
-    const t=setInterval(()=>{
-      current+=increment;
-      if(current>=target){current=target;clearInterval(t);}
-      el.textContent=prefix+(dec>0?current.toFixed(dec):Math.round(current))+suffix;
-    },duration/steps);
+/* STAT COUNTERS */
+let counted = false;
+function startCounters() {
+  if (counted) return; counted = true;
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const dec    = parseInt(el.dataset.decimal) || 0;
+    const steps  = 60, dur = 1600;
+    const inc    = target / steps;
+    let cur = 0;
+    const t = setInterval(() => {
+      cur += inc;
+      if (cur >= target) { cur = target; clearInterval(t); }
+      el.textContent = prefix + (dec > 0 ? cur.toFixed(dec) : Math.round(cur)) + suffix;
+    }, dur / steps);
   });
 }
 </script>
